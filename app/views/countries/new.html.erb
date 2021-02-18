@@ -1,0 +1,15 @@
+<%= form_for @country do |f| %>
+  <%= f.label :title, "Add a country" %>
+  <%= f.text_field :title %>
+  <%= f.label :description, "Add a description" %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
+
+
+<!-- <form action="/countries" method="post">
+  <input type="text" name="country[title]">
+  <input type="text" name="country[description]">
+  <input type="submit" value="Add country">
+</form>
+ -->

@@ -1,0 +1,9 @@
+<%= form_for @country do |f| %>
+  <%= f.label :title, "Add a country" %>
+  <%= f.text_field :title %>
+  <%= f.label :description, "Add a description" %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back", countries_path %>
