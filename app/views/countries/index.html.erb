@@ -1,0 +1,4 @@
+<% @countries.each do |country| %>
+  <p><%= country.title %> - <%= country.description %> - <%= link_to "See more", country_path(country) %></p>
+<% end %>
+
