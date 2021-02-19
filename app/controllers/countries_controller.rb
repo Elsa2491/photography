@@ -15,8 +15,11 @@ class CountriesController < ApplicationController
 
   def create
     @country = Country.create(country_params)
-    @country.save
-    redirect_to countries_path
+    if @country.save
+      redirect_to countries_path
+    else
+      render :new
+    end
   end
 
   def edit

@@ -1,0 +1,7 @@
+<h1><%= @country.title %></h1>
+
+<%= simple_form_for([@country, @region]) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.submit "Submit" %>
+<% end %>
