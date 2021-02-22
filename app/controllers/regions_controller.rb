@@ -15,6 +15,22 @@ class RegionsController < ApplicationController
     end
   end
 
+  def edit
+    @region = Region.find(params[:id])
+  end
+
+  def update
+    @region = Region.find(params[:id])
+    @region.update(region_params)
+    redirect_to countries_path(@country)
+  end
+
+  def destroy
+    @region = Region.find(params[:id])
+    @region.destroy
+    redirect_to countries_path(@country)
+  end
+
   private
 
   def region_params
