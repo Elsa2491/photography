@@ -1,21 +1,12 @@
-<% if  @country.title == "Iceland" %>
-  <p><%= @country.title %> ♥️</p>
-<% elsif @country.title == "Norway" %>
-  <p><%= @country.title %> ❄️</p>
-<% elsif @country.title == "Denmark" %>
-  <p><%= @country.title %> 🇩🇰 </p>
-<% elsif @country.title == "Faroe Islands" %>
-  <p><%= @country.title %>  ☔️</p>
-<% elsif @country.title == "Portugal" %>
-  <p><%= @country.title %> ☀️ </p>
-<% elsif @country.title == "England" %>
-  <p><%= @country.title %> 🇬🇧 </p>
-<% else %>
-  <p><%= @country.title %></p>
+<p><%= @country.title %> - <%= @country.description %></p>
+
+
+<% @country.regions.each do |region| %>
+  <ul><%= region.title %> | <%= region.description%></ul>
 <% end %>
-<p> <%= @country.description %> </p>
 
 <%= link_to "Back", countries_path %> |
 <%= link_to "Edit", edit_country_path(@country) %> |
-<%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
+<%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%> |
+<%= link_to "Add a region", new_country_region_path(@country) %>
 
