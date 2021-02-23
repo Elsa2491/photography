@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :countries do
+  resources :countries, except: :index do
     resources :regions, only: [:new, :create]
   end
   resources :regions, only: [:edit, :update, :destroy]
