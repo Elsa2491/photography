@@ -15,8 +15,9 @@ class CountriesController < ApplicationController
 
   def create
     @country = Country.create(country_params)
+    @country.user_id = current_user.id
     if @country.save
-      redirect_to countries_path
+      redirect_to root_path
     else
       render :new
     end
@@ -27,12 +28,13 @@ class CountriesController < ApplicationController
 
   def update
     @country.update(country_params)
-    redirect_to countries_path
+    redirect_to root_path
   end
 
   def destroy
+    @country.user_id = current_user.id
     @country.destroy
-    redirect_to countries_path
+    redirect_to root_path
   end
 
   private

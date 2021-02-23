@@ -2,7 +2,7 @@
   <p><%= country.title %> | <%= country.description %> |
   <%= link_to 'See more', country_path(country) %> |
   <%= link_to 'Edit', edit_country_path(country) %> |
-  <%= link_to 'Delete', country_path(country), method: :destroy, data: { confirm: "Are you sure you want to delete #{country.title}?"} %> |
+  <%= link_to 'Delete', country_path(country), method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %> |
   <%= link_to "Add region", new_country_region_path(country) %></p>
 <% end %>
 
