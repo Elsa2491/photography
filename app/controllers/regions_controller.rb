@@ -4,12 +4,14 @@ class RegionsController < ApplicationController
   def new
     @country = Country.find(params[:country_id])
     @region = Region.new
+    authorize @region
   end
 
   def create
     @country = Country.find(params[:country_id])
     @region = Region.new(region_params)
     @region.country = @country
+    authorize @region
     if @region.save
       redirect_to root_path
     else
@@ -38,5 +40,6 @@ class RegionsController < ApplicationController
 
   def set_region
     @region = Region.find(params[:id])
+    authorize @region
   end
 end

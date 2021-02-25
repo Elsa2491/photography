@@ -7,8 +7,10 @@
   <% end %>
   <% if policy(country).destroy? %>
     <%= link_to 'Delete', country_path(country), method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %> |
-    <%= link_to "Add region", new_country_region_path(country) %>
   <% end %>
+
+    <%# link_to "Add region", new_country_region_path(country) %>
+
   </p>
 <% end %>
 
