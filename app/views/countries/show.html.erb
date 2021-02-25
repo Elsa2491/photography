@@ -19,7 +19,8 @@
   | <%= link_to "Edit", edit_country_path(@country) %> |
 <% end %>
 <% if policy(@country).destroy? %>
-  <%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%> |
+  <%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
 <% end %>
-  <%= link_to "Add a region", new_country_region_path(@country) %>
-
+<% if policy(Region).create? %>
+  | <%= link_to "Add a region", new_country_region_path(@country) %>
+<% end %>
