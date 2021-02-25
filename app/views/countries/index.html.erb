@@ -1,9 +1,17 @@
 <% @countries.each do |country| %>
-  <p><%= country.title %> | <%= country.description %> |
-  <%= link_to 'See more', country_path(country) %> |
-  <%= link_to 'Edit', edit_country_path(country) %> |
-  <%= link_to 'Delete', country_path(country), method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %> |
-  <%= link_to "Add region", new_country_region_path(country) %></p>
+  <p>
+  <%= country.title %> | <%= country.description %> |
+  <%= link_to 'See more', country_path(country) %>
+  <% if policy(country).edit? %>
+    | <%= link_to 'Edit', edit_country_path(country) %> |
+  <% end %>
+  <% if policy(country).destroy? %>
+    <%= link_to 'Delete', country_path(country), method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %> |
+    <%= link_to "Add region", new_country_region_path(country) %>
+  <% end %>
+  </p>
 <% end %>
 
-<%= link_to 'Add a new country', new_country_path %>
+<% if policy(Country).create? %>
+  <%= link_to 'Add a new country', new_country_path %>
+<% end %>

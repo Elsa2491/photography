@@ -3,7 +3,7 @@ class CountriesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @countries = Country.all
+    @countries = policy_scope(Country)
   end
 
   def show
@@ -11,13 +11,15 @@ class CountriesController < ApplicationController
 
   def new
     @country = Country.new
+    authorize @country
   end
 
   def create
     @country = Country.create(country_params)
-    @country.user_id = current_user.id
+    @country.user = current_user
+    authorize @country
     if @country.save
-      redirect_to root_path
+      redirect_to root_path, notice: "Your country was successfully created"
     else
       render :new
     end
@@ -32,7 +34,7 @@ class CountriesController < ApplicationController
   end
 
   def destroy
-    @country.user_id = current_user.id
+    @country.user = current_user
     @country.destroy
     redirect_to root_path
   end
@@ -45,5 +47,6 @@ class CountriesController < ApplicationController
 
   def set_country
     @country = Country.find(params[:id])
+    authorize @country
   end
 end
