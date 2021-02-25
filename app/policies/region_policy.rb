@@ -1,6 +1,6 @@
 class RegionPolicy < ApplicationPolicy
   def create?
-    user.country_ids == user.countries
+    true
   end
 
   def update?
@@ -17,5 +17,3 @@ class RegionPolicy < ApplicationPolicy
     end
   end
 end
-
-
