@@ -11,13 +11,15 @@ class CountriesController < ApplicationController
 
   def new
     @country = Country.new
+    authorize @country
   end
 
   def create
     @country = Country.create(country_params)
     @country.user_id = current_user.id
+    authorize @country
     if @country.save
-      redirect_to root_path
+      redirect_to root_path, notice: "Your country was successfully created"
     else
       render :new
     end
