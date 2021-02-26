@@ -1,6 +1,6 @@
 class CountryPolicy < ApplicationPolicy
   def show?
-    user.admin?
+    true
   end
 
   def create?
