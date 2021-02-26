@@ -36,7 +36,7 @@ class CountriesController < ApplicationController
   def destroy
     @country.user = current_user
     @country.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "Your country was successfully deleted"
   end
 
   private
