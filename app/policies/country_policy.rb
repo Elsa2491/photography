@@ -4,11 +4,15 @@ class CountryPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    true if user
   end
 
   def update?
-    record.user == user
+    if record.user == user
+      true
+    else
+      false
+    end
   end
 
   def destroy?
