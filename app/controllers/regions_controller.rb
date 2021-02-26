@@ -7,6 +7,10 @@ class RegionsController < ApplicationController
     authorize @region
   end
 
+  def show
+    authorize @region
+  end
+
   def create
     @country = Country.find(params[:country_id])
     @region = Region.new(region_params)
