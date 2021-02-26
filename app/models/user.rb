@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   has_many :countries, dependent: :destroy
   has_many :regions, through: :countries
+  has_many :photos, through: :regions
 end

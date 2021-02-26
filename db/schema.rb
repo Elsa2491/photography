@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_143108) do
+ActiveRecord::Schema.define(version: 2021_02_26_222723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 2021_02_26_143108) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_countries_on_user_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.bigint "region_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["region_id"], name: "index_photos_on_region_id"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -48,5 +57,6 @@ ActiveRecord::Schema.define(version: 2021_02_26_143108) do
   end
 
   add_foreign_key "countries", "users"
+  add_foreign_key "photos", "regions"
   add_foreign_key "regions", "countries"
 end
