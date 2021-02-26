@@ -2,10 +2,10 @@
   <p>
   <%= country.title %> | <%= country.description %> |
   <%= link_to 'See more', country_path(country) %>
-  <% if policy(country).edit? %>
+  <% if policy(admin).edit? %>
     | <%= link_to 'Edit', edit_country_path(country) %> |
   <% end %>
-  <% if policy(country).destroy? %>
+  <% if policy(admin).destroy? %>
     <%= link_to 'Delete', country_path(country), method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %> |
   <% end %>
 
