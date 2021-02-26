@@ -1,8 +1,4 @@
 class RegionPolicy < ApplicationPolicy
-  def show?
-    true
-  end
-
   def create?
     if user
       true if user.admin?
