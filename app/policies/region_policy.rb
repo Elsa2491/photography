@@ -1,14 +1,14 @@
 class RegionPolicy < ApplicationPolicy
   def create?
-    user.admin?
+    true
   end
 
   def update?
-    record.country.user == user || user.admin?
+    record.country.user == user
   end
 
   def destroy?
-    record.country.user == user || user.admin?
+    record.country.user == user
   end
 
   class Scope < Scope
