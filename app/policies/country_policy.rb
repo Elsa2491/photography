@@ -1,22 +1,30 @@
 class CountryPolicy < ApplicationPolicy
   def show?
-    true
+    user.admin?
   end
 
   def create?
-    true if user
+    if user
+      true if user.admin?
+    else
+      false
+    end
   end
 
   def update?
-    if record.user == user
-      true
+    if user
+      true if user.admin?
     else
       false
     end
   end
 
   def destroy?
-    record.user == user
+    if user
+      true if user.admin?
+    else
+      false
+    end
   end
 
   class Scope < Scope

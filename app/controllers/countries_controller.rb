@@ -1,12 +1,14 @@
 class CountriesController < ApplicationController
-  before_action :set_country, only: %i[show edit update destroy]
+  #before_action :set_country, only: %i[show edit update destroy]
   skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :set_country, only: %i[edit update destroy]
 
   def index
     @countries = policy_scope(Country)
   end
 
   def show
+    @country = Country.find(params[:id])
   end
 
   def new
