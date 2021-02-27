@@ -8,18 +8,18 @@ class RegionPolicy < ApplicationPolicy
   end
 
   def update?
-    if record.country.user
+    if user
+      true if user.admin?
+    else
       false
-    elsif user.admin?
-      true
     end
   end
 
   def destroy?
-    if record.country.user
+    if user
+      true if user.admin?
+    else
       false
-    elsif user.admin?
-      true
     end
   end
 
