@@ -1,6 +1,6 @@
 class RegionsController < ApplicationController
-  before_action :set_region, only: %i[edit update destroy]
-
+  # before_action :set_region, only: %i[edit update destroy]
+  before_action :set_region, only: %i[edit update]
   def show
     @country = Country.find(params[:country_id])
     @region = Region.find(params[:country_id])
@@ -34,8 +34,9 @@ class RegionsController < ApplicationController
   end
 
   def destroy
-    @region.destroy
-    redirect_to root_path
+    if @region.destroy
+      redirect_to country_path(@country)
+    end
   end
 
   private
