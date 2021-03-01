@@ -13,7 +13,7 @@ class RegionsController < ApplicationController
     @region.country = @country
     authorize @region
     if @region.save
-      redirect_to root_path
+      redirect_to country_path(@country)
     else
       render :new
     end
