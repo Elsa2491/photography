@@ -1,6 +1,12 @@
 class RegionsController < ApplicationController
   before_action :set_region, only: %i[edit update destroy]
 
+  def show
+    @country = Country.find(params[:country_id])
+    @region = Region.find(params[:country_id])
+    @region.country = @country
+  end
+
   def new
     @country = Country.find(params[:country_id])
     @region = Region.new
@@ -24,7 +30,7 @@ class RegionsController < ApplicationController
 
   def update
     @region.update(region_params)
-    redirect_to root_path
+    redirect_to country_path(@country)
   end
 
   def destroy
