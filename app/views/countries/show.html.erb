@@ -1,9 +1,8 @@
 <p><%= @country.title %> - <%= @country.description %></p>
 
-
-<% @country.regions.each_with_index do |region, index| %>
+<%= @country.regions.each_with_index do |region, index| %>
   <ul>
-    <%= "#{index + 1}" %> - <%=  region.title %> | 
+    <%= "#{index + 1}" %> - <%= region.title %> | 
     <%= region.description %>
     <% if policy(region).edit? %>
       | <%= link_to 'Edit region', edit_region_path(region) %> |
@@ -24,3 +23,4 @@
 <% if policy(Region).create? %>
   | <%= link_to "Add a region", new_country_region_path(@country) %>
 <% end %>
+
