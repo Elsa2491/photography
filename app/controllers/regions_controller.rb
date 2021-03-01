@@ -1,5 +1,10 @@
 class RegionsController < ApplicationController
-  before_action :set_region, only: %i[edit update destroy]
+  #before_action :set_region, only: %i[edit update destroy]
+   before_action :set_region, only: %i[update destroy]
+
+  def index
+    @regions = policy_scope(Region)
+  end
 
   def new
     @country = Country.find(params[:country_id])
@@ -20,11 +25,14 @@ class RegionsController < ApplicationController
   end
 
   def edit
+    @region = Region.find(params[:id])
   end
+  # def edit
+  # end
 
   def update
     @region.update(region_params)
-    redirect_to root_path
+    redirect_to country_regions_path(@country)
   end
 
   def destroy

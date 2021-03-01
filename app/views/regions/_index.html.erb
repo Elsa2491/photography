@@ -1,0 +1,28 @@
+<p><%= @country.title %> - <%= @country.description %></p>
+
+
+<% @country.regions.each_with_index do |region, index| %>
+  <ul>
+    <%= "#{index + 1}" %> - <%=  region.title %> | 
+    <%= region.description %>
+    <% if policy(region).edit? %>
+      | <%#= link_to 'Edit region', edit_region_path(region) %> |
+      | <%= link_to 'Edit region', edit_country_region_path(region) %> |
+    <% end %>
+    <% if policy(region).destroy? %>
+      <%= link_to 'Delete region', region_path(region), method: :delete, data: { confirm: "Are you sure you want to delete #{region.title}?"}%>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to "Back", root_path %>
+<% if policy(@country).edit? %>
+  | <%= link_to "Edit", edit_country_path(@country) %> |
+<% end %>
+<% if policy(@country).destroy? %>
+  <%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
+<% end %>
+<% if policy(Region).create? %>
+  | <%= link_to "Add a region", new_country_region_path(@country) %>
+<% end %>
+

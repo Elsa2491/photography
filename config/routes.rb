@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  # resources :countries, except: :index do
+  #   resources :regions, only: [:new, :create]
+  # end
+  # resources :regions, only: [:index, :edit, :update, :destroy]
+
   resources :countries, except: :index do
-    resources :regions, only: [:new, :create]
+    resources :regions
   end
-  resources :regions, only: [:edit, :update, :destroy]
+  resources :regions, only: [:destroy]
 
   devise_for :users
   root to: 'countries#index'
