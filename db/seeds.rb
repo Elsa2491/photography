@@ -25,7 +25,7 @@ user_1 = User.create!(nickname: "User 1", email: "user1.test@test.com", password
 admin_1 = User.create!(nickname: "Admin", email: "useradmin.test@test.com", password: "14PORTEFOIN", password_confirmation: "14PORTEFOIN", admin: true)
 
 
-puts 'User created.Creating countries'
+puts 'Users created. Creating countries'
 
 country_1 = { title: "Admin", description: "Test 1", user_id: admin_1.id }
 country_2 =  { title: "Admin_1", description: "Test 2", user_id: admin_1.id }
@@ -35,4 +35,5 @@ country_3 = { title: "ARTHOUR", description: "Couillière !", user_id: admin_1.i
   country = Country.create!(attributes)
   puts "Created #{country.title}"
 end
+
 puts "Finished"
