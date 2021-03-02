@@ -7,10 +7,10 @@
     <%= region.description %>
     | <%= link_to 'See more', country_region_path(region) %>
     <% if policy(region).edit? %>
-      | <%= link_to 'Edit region', edit_country_region_path(@country) %> |
+      | <%= link_to 'Edit region', edit_country_region_path([@country, region]) %> |
     <% end %>
     <% if policy(region).destroy? %>
-      <%= link_to 'Delete region', country_region_path(region), method: :delete, data: { confirm: "Are you sure you want to delete #{region.title}?"}%>
+      <%= link_to 'Delete region', country_region_path(@country, region), method: :delete, data: { confirm: "Are you sure you want to delete #{region.title}?"}%>
     <% end %>
   </ul>
 <% end %>
