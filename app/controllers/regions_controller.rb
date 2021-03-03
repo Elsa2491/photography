@@ -1,6 +1,14 @@
 class RegionsController < ApplicationController
   before_action :set_region, only: %i[edit update destroy]
 
+  def index
+    @regions = policy_scope(Region)
+  end
+
+  def show
+    @region = Region.find(params[:id])
+  end
+
   def new
     @country = Country.find(params[:country_id])
     @region = Region.new
