@@ -32,7 +32,7 @@ class RegionsController < ApplicationController
 
   def update
     @region.update(region_params)
-    redirect_to root_path
+    redirect_to country_path(@region.country)
   end
 
   def destroy
