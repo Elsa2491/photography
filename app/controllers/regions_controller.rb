@@ -1,4 +1,5 @@
 class RegionsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_region, only: %i[edit update destroy]
 
   def index
