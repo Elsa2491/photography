@@ -3,3 +3,8 @@
   <%= f.input :description %>
   <%= f.submit "Submit" %>
 <% end %>
+
+<p>
+  <%= link_to 'Back', country_path(@region.country) %>
+  <%= link_to 'Home', root_path  %>
+</p>

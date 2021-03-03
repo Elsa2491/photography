@@ -3,8 +3,9 @@
 
 <% @country.regions.each_with_index do |region, index| %>
   <ul>
-    <%= "#{index + 1}" %> - <%=  region.title %> | 
+    <%= "#{index + 1}" %> - <%= region.title %> :
     <%= region.description %>
+    | <%= link_to 'Show', region_path(region) %>
     <% if policy(region).edit? %>
       | <%= link_to 'Edit region', edit_region_path(region) %> |
     <% end %>
@@ -14,7 +15,7 @@
   </ul>
 <% end %>
 
-<%= link_to "Back", root_path %>
+<%= link_to "Home", root_path %>
 <% if policy(@country).edit? %>
   | <%= link_to "Edit", edit_country_path(@country) %> |
 <% end %>
