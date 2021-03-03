@@ -37,7 +37,7 @@ class RegionsController < ApplicationController
 
   def destroy
     @region.destroy
-    redirect_to root_path
+    redirect_to country_path(@region.country)
   end
 
   private
