@@ -1,7 +1,7 @@
 <% @countries.each do |country| %>
   <p>
     <%= country.title %> | <%= country.description %>
-    <p><%= cl_image_tag country.image.key, alt: "", width: 400, height: 300, crop: :fill %></p>
+      <p><%= cl_image_tag country.image.key, alt: "", width: 400, height: 300, crop: :fill %></p>
     <p>
       <%= link_to 'See more', country_path(country) %>
       <% if policy(country).edit? %>
