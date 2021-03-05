@@ -44,7 +44,7 @@ class RegionsController < ApplicationController
   private
 
   def region_params
-    params.require(:region).permit(:title, :description)
+    params.require(:region).permit(:title, :description, :image)
   end
 
   def set_region
