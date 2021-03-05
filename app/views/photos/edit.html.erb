@@ -1,0 +1,10 @@
+<%= simple_form_for(@photo) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.submit "Submit" %>
+<% end %>
+
+<p>
+  <%= link_to 'Back', region_path(@photo.region) %>
+  <%= link_to 'Home', root_path  %>
+</p>

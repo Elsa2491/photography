@@ -2,16 +2,6 @@
   <p>
   <%= region.title %> | <%= region.description %> |
   <%= link_to 'See more',  country_regions_path(region) %>
- <!--  <%# if policy(region).edit? %>
-    | <%#= link_to 'Edit', edit_region_path(region) %> |
-  <%# end %>
-  <%# if policy(region).destroy? %>
-    <%#= link_to 'Delete', region_path(region), method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %>
-  <%# end %> -->
   </p>
 <% end %>
-
-<%# if policy(Country).create? %>
-  <%#= link_to 'Add a new country', new_country_path %>
-<%# end %>
 

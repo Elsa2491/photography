@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   resources :countries, except: :index do
-    resources :regions, shallow: true
+    resources :regions, shallow: true do
+      resources :photos, shallow: true
+    end
   end
   resources :regions, only: [:edit, :update, :destroy]
+  resources :photos, only: [:edit, :update, :destroy]
+
 
   devise_for :users
   root to: 'countries#index'
