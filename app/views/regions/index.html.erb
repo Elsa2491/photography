@@ -1,6 +1,7 @@
 <% @regions.each do |region| %>
   <p>
-  <%= region.title %> | <%= region.description %> |
+  <%= region.title %> | <%= region.description %>
+   <p><%= cl_image_tag region.image.key, alt: "", width: 400, height: 300, crop: :fill %></p>
   <%= link_to 'See more',  country_regions_path(region) %>
   </p>
 <% end %>

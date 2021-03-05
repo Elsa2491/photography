@@ -1,11 +1,11 @@
 <p><%= @country.title %> - <%= @country.description %></p>
 
-
 <% @country.regions.each_with_index do |region, index| %>
   <ul>
     <%= "#{index + 1}" %> - <%= region.title %> :
     <%= region.description %>
-    | <%= link_to 'Show', region_path(region) %>
+    <p><%= cl_image_tag region.image.key, alt: "", width: 400, height: 300, crop: :fill %></p>
+    <%= link_to 'Show', region_path(region) %>
     <% if policy(region).edit? %>
       | <%= link_to 'Edit region', edit_region_path(region) %> |
     <% end %>
@@ -15,13 +15,15 @@
   </ul>
 <% end %>
 
-<%= link_to "Home", root_path %>
-<% if policy(@country).edit? %>
-  | <%= link_to "Edit", edit_country_path(@country) %> |
-<% end %>
-<% if policy(@country).destroy? %>
-  <%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
-<% end %>
-<% if policy(Region).create? %>
-  | <%= link_to "Add a region", new_country_region_path(@country) %>
-<% end %>
+<p>
+  <%= link_to "Home", root_path %>
+  <% if policy(@country).edit? %>
+    | <%= link_to "Edit", edit_country_path(@country) %> |
+  <% end %>
+  <% if policy(@country).destroy? %>
+    <%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
+  <% end %>
+  <% if policy(Region).create? %>
+    | <%= link_to "Add a region", new_country_region_path(@country) %>
+  <% end %>
+</p>
