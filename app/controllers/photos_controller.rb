@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_photo, only: %i[edit update destroy]
+
   def index
     @photos = policy_scope(Photo)
   end
