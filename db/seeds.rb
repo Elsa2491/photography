@@ -35,17 +35,17 @@ puts 'Users created. Creating countries'
 image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1614952029/1z07fskgywzz0p5fxc7e8s6gm2fq.jpg")
 country_1 = Country.new(title: "Admin", description: "Test 1", user_id: admin_1.id)
 country_1.image.attach(io: image_1, filename: 'file.jpg', content_type: 'image/jpg')
-
+country_1.save
 
 image_2 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1614949514/w06kks5xmuuhyw0yrc0y8a0zpjzi.jpg")
 country_2 = Country.new(title: "Admin_1", description: "Test 2", user_id: admin_1.id)
 country_2.image.attach(io: image_2, filename: 'le roi burgonde.jpg', content_type: 'image/jpg')
-
+country_2.save
 
 image_3 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1614952092/8hz2353bolhgbnhaq7yoyemg56nu.jpg")
 country_3 = Country.new(title: "ARTHOUR", description: "Couillière !", user_id: admin_1.id)
 country_3.image.attach(io: image_3, filename: 'le roi burgonde.jpg', content_type: 'image/jpg')
-
+country_3.save
 
 
 [ country_1, country_2, country_3 ].each do |country|
@@ -54,6 +54,10 @@ end
 
 puts 'Countries created. Creating regions'
 
-#region_1 = { title: "ARTHOUR", description: "Pas changer assiette pour fromage !", country_id: country_1.id }
+region_image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1614949742/d2x8oshku5jna5ovcachlb6p9f09.jpg")
+region_1 = Region.new(title: "ARTHOUR", description: "Pas changer assiette pour fromage !", country_id: country_3.id)
+region_1.image.attach(io: region_image_1, filename: 'le roi burgonde.jpg', content_type: 'image/jpg')
+region_1.save
 
+puts "Created #{region_1.title}"
 puts "Finished"
