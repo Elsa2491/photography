@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
     @photo.region = @region
     authorize @photo
     if @photo.save
-      redirect_to region_path(@region), notice: "Photo was successfuly created"
+      redirect_to region_path(@region), notice: "Your photo was successfuly created"
     else
       render :new
     end
@@ -33,12 +33,12 @@ class PhotosController < ApplicationController
 
   def update
     @photo.update(photo_params)
-    redirect_to region_path(@photo.region)
+    redirect_to region_path(@photo.region), notice: "Your photo was successfuly updated"
   end
 
   def destroy
     @photo.destroy
-    redirect_to region_path(@photo.region)
+    redirect_to region_path(@photo.region), notice: "Your photo was successfuly deleted"
   end
 
   private

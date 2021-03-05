@@ -22,7 +22,7 @@ class RegionsController < ApplicationController
     @region.country = @country
     authorize @region
     if @region.save
-      redirect_to country_path(@country)
+      redirect_to country_path(@country), notice: "Your region was successfully created"
     else
       render :new
     end
@@ -33,12 +33,12 @@ class RegionsController < ApplicationController
 
   def update
     @region.update(region_params)
-    redirect_to country_path(@region.country)
+    redirect_to country_path(@region.country), notice: "Your region was successfully updated"
   end
 
   def destroy
     @region.destroy
-    redirect_to country_path(@region.country)
+    redirect_to country_path(@region.country), notice: "Your region was successfully deleted"
   end
 
   private

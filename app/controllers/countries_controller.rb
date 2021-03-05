@@ -31,7 +31,7 @@ class CountriesController < ApplicationController
 
   def update
     @country.update(country_params)
-    redirect_to root_path
+    redirect_to root_path, notice: "Your was successfuly updated"
   end
 
   def destroy
