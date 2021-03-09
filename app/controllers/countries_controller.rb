@@ -3,7 +3,7 @@ class CountriesController < ApplicationController
   before_action :set_country, only: %i[edit update destroy]
 
   def index
-    @countries = policy_scope(Country)
+    @countries = policy_scope(Country).order(created_at: :asc)
   end
 
   def show
@@ -31,7 +31,7 @@ class CountriesController < ApplicationController
 
   def update
     @country.update(country_params)
-    redirect_to root_path, notice: "Your was successfuly updated"
+    redirect_to root_path, notice: "Your country was successfuly updated"
   end
 
   def destroy
