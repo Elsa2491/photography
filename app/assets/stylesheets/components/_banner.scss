@@ -18,13 +18,24 @@
   color: #000;
 }
 
-.border{
-  color: #fff;
+.banner_title{
+  color: #F3F3F3;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+  text-shadow: 0 0 1px #ADB5BD;
 }
 
 #banner_title {
   border: none !important;
 }
+
+.banner_text {
+  color: #F3F3F3;
+  letter-spacing: 5px;
+  padding-top: 10px;
+  text-shadow: 0 0 1px #ADB5BD;
+}
+
+
+
