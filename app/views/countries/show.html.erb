@@ -34,21 +34,16 @@
   </div>
 </div>
 
-
-
-
-<p>
+ <p>
   <%= link_to "Home", root_path, class:"CTA" %>
   <% if policy(@country).edit? %>
-    | <%= link_to "Edit", edit_country_path(@country), class:"CTA" %> |
+    | <%= link_to "Edit #{@country.title.capitalize}", edit_country_path(@country), class:"CTA" %> |
   <% end %>
   <% if policy(@country).destroy? %>
-    <%= link_to "Delete", country_path(@country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
+    <%= link_to "Delete #{@country.title.capitalize}", country_path(@country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
   <% end %>
   <% if policy(Region).create? %>
     | <%= link_to "Add a region", new_country_region_path(@country), class:"CTA" %>
   <% end %>
 </p>
-
-
 
