@@ -1,7 +1,0 @@
-<%= link_to 'Home', root_path %> |
-<%= link_to 'Back', country_path(@region.country) %>
-<% if policy(Photo).create? %>
-  | <%= link_to 'Add photo', new_region_photo_path(@region) %>
-<% end %>
-
-
