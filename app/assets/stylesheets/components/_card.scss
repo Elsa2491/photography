@@ -1,35 +1,29 @@
-.countries {
+.all_cards {
   // background: blue;
   margin: 50px;
   display: flex;
   flex-grow: 1;
-  // align-items: center;
-  // justify-items: center;
   justify-content: space-around;
-  // width: 100px;
-  // height: 50px;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
-  //align-content: start;
-}
-
-.one_country_info {
-  // background: blue;
-}
-
-.country_image {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-items: center;
+  background-color: #F3F3F3;
 }
 
 
-.country_CTA {
+.title_CTA {
   //background : green;
   padding-top: 10px;
+
 }
+
+.CTA {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
