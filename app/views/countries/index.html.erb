@@ -1,19 +1,36 @@
-<div class="countries">
+<div class="banner">
+  <div class="caption">
+    <span class="border" id="banner_title">Ready to travel?</span>
+  </div>
+</div>
+
+
+<div class="all_cards">
   <div class="wrapper">
     <% @countries.each do |country| %>
 
-      <div class="one_country_info">
-        <div class="country_image">
-          <%= cl_image_tag country.image.key, alt: "", :secure => true, :width=>300, :dpr=>2.0, :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100%> <!--crop: :fill, :radius =>  15, :crop=>"mfit", :aspect_ratio=>"2:1" ,  width: 280, height: 350,-->
+      <div class="one_card_info">
+        <div class="card_image">
+          <%= cl_image_tag country.image.key, alt: "", :secure => true, :width=>300, :dpr=>2.0,
+          :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%> <!--crop: :fill, :radius =>  15, :crop=>"mfit", :aspect_ratio=>"2:1" ,  width: 280, height: 350,-->
         </div>
 
-        <div class="country_CTA">
-            <%= link_to "#{country.title} #{country.description}", country_path(country) %>
+        <div class="card_links">
+          <div class="title_CTA">
+            <%= link_to "#{country.title.upcase}", country_path(country), class:"CTA" %>
+          </div>
+
+          <div class="description_CTA">
+            <%=  "#{country.description.capitalize}" %>
+          </div>
+        </div>
+
+        <div class="pundit_CTA">
           <% if policy(country).edit? %>
-            | <%= link_to 'Edit', edit_country_path(country) %> |
+            <%= link_to 'Edit', edit_country_path(country), class:"CTA" %> |
           <% end %>
           <% if policy(country).destroy? %>
-            <%= link_to 'Delete', country_path(country), method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %>
+            <%= link_to 'Delete', country_path(country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{country.title}?"} %>
           <% end %>
         </div>
       </div>
@@ -21,6 +38,7 @@
     <% end %>
   </div>
 </div>
+
 
 <%# if policy(Country).create? %>
   <%#= link_to 'Add a new country', new_country_path %>

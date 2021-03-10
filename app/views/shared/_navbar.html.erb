@@ -8,7 +8,7 @@
   </button>
 
 <% if policy(Country).create? %>
-  <%= link_to 'Add a new country', new_country_path %>
+  <%= link_to 'Add a new country', new_country_path, class:"CTA" %>
 <% end %>
 
   <% if current_user %>
