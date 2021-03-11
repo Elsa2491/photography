@@ -1,0 +1,25 @@
+#add_country_container, #edit_country_container {
+  padding-top: 45px;
+}
+
+
+.form_title {
+  color: #0E0000;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+
+.form_links {
+  padding-top: 30px;
+    a {
+      color: #0E0000;
+      &:hover {
+        text-decoration: none;
+        color: #212529;
+      }
+    }
+}
+
+
+// l'image de fond est dans banner.scss

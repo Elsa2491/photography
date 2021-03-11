@@ -1,8 +1,23 @@
-<%= simple_form_for @country do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :image, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="banner form_new_country">
+  <div class="container">
+      <div class="row" id="add_country_container">
 
-<%= link_to "Home", root_path %>
+        <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
+          <div class="form_title">
+            <%= 'Add a country'.upcase %>
+          </div>
+          <%= simple_form_for @country do |f| %>
+            <%= f.input :title %>
+            <%= f.input :description %>
+            <%= f.input :image, as: :file %>
+            <%= f.submit %>
+          <% end %>
+
+          <div class="form_links">
+          <%= link_to "Home", root_path %>
+          </div>
+       </div>
+
+    </div>
+  </div>
+</div>
