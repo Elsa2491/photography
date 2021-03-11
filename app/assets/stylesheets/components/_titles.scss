@@ -1,18 +1,23 @@
 .pages_titles  {
-  padding-top: 70px;
-  h1 {
-    font-weight: bold;
-    font-size: 35px;
-    letter-spacing: 11px;
-  }
-  p {
-    letter-spacing: 4px;
-    padding-top: 8px;
-  }
+  color: #747474;
+    h1 {
+      font-weight: bold;
+      font-size: 28px;
+      letter-spacing: 11px;
+      margin-bottom: 0px;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+    p {
+      letter-spacing: 4px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 0px;
+    }
 }
 
-.pages_titles h1, .pages_titles p {
-  display: flex;
-  justify-content: space-around;
-}
 
+#visitor {
+  margin-left: 100px;
+}
