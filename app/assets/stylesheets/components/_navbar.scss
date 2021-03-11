@@ -19,3 +19,11 @@
   height: 50px;
   width: 50px;
 }
+
+.add_country {
+  color: #FFF8F4;
+  &:hover {
+    text-decoration: none;
+    color: #E4E3E4;
+  }
+}
