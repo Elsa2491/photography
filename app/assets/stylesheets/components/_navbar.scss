@@ -1,24 +1,29 @@
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background: white;
-// }
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-// .navbar-lewagons #navbar-brand, .img {
-//   width: 40px;
-//   background-image: asset-url('faguoren_logo.pdf');
-// }
-////////////////////////////////////////////////////////////////////////////////
 .navbar {
   background-color: rgba(0,0,0,0);
+  padding: 0px;
+  margin-top: 0px;
 }
+
+
+.greeting {
+  margin-left: 1vw;
+  color: #FFF8F4;
+}
+
+
+.nav_margin {
+  margin-top: 1vw;
+  margin-right: 1vw;
+}
+
+
 .logo {
   background-image: asset-url('faguoren_logo.jpg');
   background-size: cover;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
 }
+
 
 .add_country {
   color: #FFF8F4;
@@ -27,6 +32,7 @@
     color: #E4E3E4;
   }
 }
+
 
 .sticky {
   position: fixed;
@@ -37,4 +43,5 @@
 
 .nav_countries_show {
   background-color: #F3F3F3;
-  }
+  justify-content: space-between;
+}

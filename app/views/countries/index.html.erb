@@ -14,7 +14,7 @@
       <div class="one_card_info">
         <div class="card_image">
           <%= cl_image_tag country.image.key, alt: "", :secure => true, :width=>300, :dpr=>2.0,
-          :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%> <!--crop: :fill, :radius =>  15, :crop=>"mfit", :aspect_ratio=>"2:1" ,  width: 280, height: 350,-->
+          :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%>
         </div>
 
         <div class="card_links">
@@ -40,8 +40,3 @@
     <% end %>
   </div>
 </div>
-
-
-<%# if policy(Country).create? %>
-  <%#= link_to 'Add a new country', new_country_path %>
-<%# end %>
