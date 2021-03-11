@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div class="navbar">
       <% if policy(Country).create? %>
-        <%= link_to 'Add a new country', new_country_path, class:"CTA" %>
+        <%= link_to 'Add a new country', new_country_path, class:"add_country"%>
       <% end %>
     <span>Hello <%= current_user.nickname %>. You can do it ! 💪😘</span>
 

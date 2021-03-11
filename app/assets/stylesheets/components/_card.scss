@@ -11,19 +11,39 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
   background-color: #F3F3F3;
+  padding-top: 20px;
 }
 
+.one_card_info, .CTA {
+  color: #747474;
+}
+
+.card_image {
+  padding-top: 20px;
+}
 
 .title_CTA {
   //background : green;
-  padding-top: 10px;
+  padding-top: 14px;
+  font-size: 16px;
+  letter-spacing: 8px;
+  font-weight: 600;
+}
 
+.description_CTA {
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 300;
 }
 
 .CTA {
   &:hover {
     text-decoration: none;
+    color: #343A40;
   }
 }
 
+.pundit_CTA {
+  padding-top: 11px;
+}
 
