@@ -1,3 +1,5 @@
+<%= render 'shared/navbar_countries_show' %>
+
 <p><%= @country.title %> - <%= @country.description %></p>
 
 <div class="all_cards">
@@ -21,29 +23,16 @@
         </div>
 
         <div class="pundit_CTA">
-          <% if policy(region).edit? %>
-            <%= link_to 'Edit region', edit_region_path(region), class:"CTA" %> |
-          <% end %>
-          <% if policy(region).destroy? %>
-            <%= link_to 'Delete region', region_path(region), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{region.title}?"}%>
-          <% end %>
+            <% if policy(region).edit? %>
+              <%= link_to "Edit #{region.title.capitalize}", edit_region_path(region), class:"CTA" %> |
+            <% end %>
+            <% if policy(region).destroy? %>
+              <%= link_to "Delete #{region.title.capitalize}", region_path(region), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{region.title}?"}%>
+            <% end %>
         </div>
 
       </div>
     <% end %>
   </div>
 </div>
-
- <p>
-  <%= link_to "Home", root_path, class:"CTA" %>
-  <% if policy(@country).edit? %>
-    | <%= link_to "Edit #{@country.title.capitalize}", edit_country_path(@country), class:"CTA" %> |
-  <% end %>
-  <% if policy(@country).destroy? %>
-    <%= link_to "Delete #{@country.title.capitalize}", country_path(@country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
-  <% end %>
-  <% if policy(Region).create? %>
-    | <%= link_to "Add a region", new_country_region_path(@country), class:"CTA" %>
-  <% end %>
-</p>
 
