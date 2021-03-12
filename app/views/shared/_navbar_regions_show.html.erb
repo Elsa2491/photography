@@ -1,21 +1,21 @@
 <div class="navbar sticky nav_countries_show" >
 
     <div>
-      <% if policy(@country).edit? %>
-        <%= link_to "Edit #{@country.title.capitalize}", edit_country_path(@country), class:"CTA" %>
+      <% if policy(@region).edit? %>
+        <%= link_to "Edit #{@region.title.capitalize}", edit_region_path(@region), class:"CTA" %>
       <% end %>
-      <% if policy(@country).destroy? %>
-        | <%= link_to "Delete #{@country.title.capitalize}", country_path(@country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
+      <% if policy(@region).destroy? %>
+        | <%= link_to "Delete #{@region.title.capitalize}", region_path(@region), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@region.title}?"}%>
       <% end %>
     </div>
 
 
     <div class="nav_margin">
-      <% if policy(Region).create? %>
-        <%= link_to "Add a region", new_country_region_path(@country), class:"CTA" %> |
+      <% if policy(Photo).create? %>
+        <%= link_to "Add photo", new_region_photo_path(@region), class:"CTA" %> |
       <% end %>
 
-
+      <%= link_to "Back", :back, class:"CTA" %> |
       <%= link_to "Home", root_path, class:"CTA" %>
 
       <% if user_signed_in? %>
