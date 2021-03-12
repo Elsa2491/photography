@@ -13,10 +13,8 @@
 
       <div class="one_card_info">
         <div class="card_image">
-          <%= link_to  country_path(country) do %>
-            <%= cl_image_tag country.image.key, alt: "", :secure => true, :width=>300, :dpr=>2.0,
-            :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%>
-          <% end %>
+          <%= cl_image_tag country.image.key, alt: "", :secure => true, :width=>300, :dpr=>2.0,
+          :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%>
         </div>
 
         <div class="card_links">

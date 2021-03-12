@@ -12,10 +12,8 @@
 
       <div class="one_card_info">
         <div class="card_image">
-          <%= link_to region_path(region) do %>
-            <%= cl_image_tag region.image.key,alt: "", :secure => true, :width=>311, :dpr=>2.0,
-            :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%>
-          <% end %>
+          <%= cl_image_tag region.image.key,alt: "", :secure => true, :width=>311, :dpr=>2.0,
+          :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%>
         </div>
 
         <div class="card_links">
