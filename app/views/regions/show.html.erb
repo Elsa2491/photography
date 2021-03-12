@@ -1,3 +1,4 @@
+<%= render 'shared/navbar_regions_show' %>
 <h5><%= @region.country.title %> - <%= @region.country.description %></h5>
 
 <ul>
@@ -20,7 +21,6 @@
     <p>
     <%= cl_image_tag photo.image.key, alt: "", width: 400, height: 300, crop: :fill %>
     </p>
-    <%# link_to "Show", photo_path(photo) %>
     <% if policy(photo).edit? %>
       <%= link_to "Edit #{@photo}", edit_photo_path(photo) %> |
     <% end %>
@@ -28,10 +28,4 @@
       <%= link_to "Delete #{@photo}", photo_path(photo), method: :delete, data: { confirm: "Are you sure you want to delete #{photo.title}?"}%>
     <% end %>
   </ul>
-<% end %>
-
-<%= link_to "Home", root_path %> |
-<%= link_to "Back", country_path(@region.country) %>
-<% if policy(Photo).create? %>
-  | <%= link_to "Add photo", new_region_photo_path(@region) %>
 <% end %>
