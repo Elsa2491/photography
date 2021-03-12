@@ -1,12 +1,10 @@
-<%#= render 'shared/form' %>
-
 <div class="banner form_new_country">
   <div class="container" id="edit_country_container">
       <div class="row pt-5">
 
         <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
           <div class="form_title">
-            <%= 'Edit a country'.upcase %>
+            <%= "Edit #{@country.title.capitalize}" %>
           </div>
           <%= simple_form_for @country do |f| %>
             <%= f.input :title %>
