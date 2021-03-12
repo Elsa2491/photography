@@ -1,11 +1,24 @@
-<%= simple_form_for(@photo) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :image, as: :file %>
-  <%= f.submit "Submit" %>
-<% end %>
+<div class="banner form_new_country">
+  <div class="container" id="edit_country_container">
+      <div class="row pt-5">
 
-<p>
-  <%= link_to 'Back', region_path(@photo.region) %>
-  <%= link_to 'Home', root_path  %>
-</p>
+        <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
+          <div class="form_title">
+            <%= "Edit #{@photo.title.capitalize} #{@photo.description.capitalize}" %>
+          </div>
+          <%= simple_form_for(@photo) do |f| %>
+            <%= f.input :title %>
+            <%= f.input :description %>
+            <%= f.input :image, as: :file %>
+            <%= f.submit "Submit" %>
+          <% end %>
+
+          <div class="form_links">
+            <%= link_to 'Back', region_path(@photo.region) %> |
+            <%= link_to 'Home', root_path  %>
+          </div>
+       </div>
+
+    </div>
+  </div>
+</div>
