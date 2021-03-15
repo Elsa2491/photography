@@ -1,6 +1,9 @@
 <%= render 'shared/navbar_regions_show' %>
 
-
+<div class="pages_titles">
+  <h1><%= @region.country.title.capitalize%></h1>
+  <p><%= @region.title.capitalize %> - <%=@region.description.capitalize%></p>
+</div>
 
           <% @region.photos.each_with_index do |photo, index| %>
             <ul>

@@ -15,7 +15,12 @@
         <%= link_to "Add photo", new_region_photo_path(@region), class:"CTA" %> |
       <% end %>
 
-      <%= link_to "Back", :back, class:"CTA" %> |
+      <% if user_signed_in? %>
+        <%= link_to "Back", country_path(@region.country), class:"CTA" %> |
+      <% else %>
+        <%= link_to "Back", :back, class:"CTA" %> |
+      <% end %>
+
       <%= link_to "Home", root_path, class:"CTA" %>
 
       <% if user_signed_in? %>
