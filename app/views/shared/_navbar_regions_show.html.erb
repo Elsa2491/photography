@@ -15,15 +15,20 @@
         <%= link_to "Add photo", new_region_photo_path(@region), class:"CTA" %> |
       <% end %>
 
-      <%= link_to "Back", :back, class:"CTA" %> |
+      <% if user_signed_in? %>
+        <%= link_to "Back", country_path(@region.country), class:"CTA" %> |
+      <% else %>
+        <%= link_to "Back", :back, class:"CTA" %> |
+      <% end %>
+
       <%= link_to "Home", root_path, class:"CTA" %>
 
       <% if user_signed_in? %>
         <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      <% else %>
-        <%= link_to root_path, class:"CTA" do  %>
-            <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", 'aria-haspopup': true, 'aria-expanded': false %>
-        <% end %>
+      <%# else %>
+        <%# link_to root_path, class:"CTA" do  %>
+            <%#= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", 'aria-haspopup': true, 'aria-expanded': false %>
+        <%# end %>
       <% end %>
 
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
