@@ -25,10 +25,10 @@
 
       <% if user_signed_in? %>
         <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      <% else %>
-        <%= link_to root_path, class:"CTA" do  %>
-            <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", 'aria-haspopup': true, 'aria-expanded': false %>
-        <% end %>
+      <%# else %>
+        <%# link_to root_path, class:"CTA" do  %>
+            <%#= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", 'aria-haspopup': true, 'aria-expanded': false %>
+        <%# end %>
       <% end %>
 
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -5,27 +5,39 @@
   <p><%= @region.title.capitalize %> - <%=@region.description.capitalize%></p>
 </div>
 
-          <% @region.photos.each_with_index do |photo, index| %>
-            <ul>
-              <%= "#{index + 1}" %> - <%= photo.title %> :
-              <%= photo.description %>
-              <p>
-              <%= cl_image_tag photo.image.key, alt: "", width: 400, height: 300, crop: :fill %>
-              </p>
-              <% if policy(photo).edit? %>
-                <%= link_to "Edit #{@photo}", edit_photo_path(photo) %> |
-              <% end %>
-              <% if policy(photo).destroy? %>
-                <%= link_to "Delete #{@photo}", photo_path(photo), method: :delete, data: { confirm: "Are you sure you want to delete #{photo.title}?"}%>
-              <% end %>
-            </ul>
-          <% end %>
+<div class="all_cards">
+  <div class="wrapper" id="photos_wrapper">
+    <% @region.photos.each_with_index do |photo, index| %>
+
+      <div class="card_image" id="photos_card_image">
+        <div class="one_card_info">
+
+          <div class="photos_index">
+            <% if index < 9 %>
+               <%= "0#{index + 1}" %>
+            <% else %>
+              <%= "#{index + 1}" %>
+            <% end %>
+          </div>
+
+          <%= cl_image_tag photo.image.key, alt: "", :secure => true, :height=>550,  :dpr=>2.0,
+          :crop=>"scale", :radius => 5, :quality=>100, :background=>"#F3F3F3" %>
+
+        <div class="photos_titles">
+        <%= photo.title.capitalize %> - <%= photo.description %>
+        </div>
+
+        <% if policy(photo).edit? %>
+          <%= link_to "Edit #{@photo}", edit_photo_path(photo), class:"CTA" %> |
+        <% end %>
+        <% if policy(photo).destroy? %>
+          <%= link_to "Delete #{@photo}", photo_path(photo), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{photo.title}?"}%>
+        <% end %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
-<h5><%= @region.country.title %> - <%= @region.country.description %></h5>
-
-<ul>
-  <p>
-    <%= @region.title %> - <%= @region.description %>
-  </p>
-</ul>
