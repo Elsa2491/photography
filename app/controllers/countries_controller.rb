@@ -8,7 +8,9 @@ class CountriesController < ApplicationController
 
   def show
     @country = Country.find(params[:id])
-    redirect_to region_path(@country.regions.first) if @country.regions.count == 1
+    if @country.regions.count == 1
+      redirect_to region_path(@country.regions.first) && @region = Region.find(params[:id])
+    end
   end
 
   def new
