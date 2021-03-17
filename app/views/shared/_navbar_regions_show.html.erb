@@ -1,6 +1,6 @@
 <div class="navbar sticky nav_countries_show" >
 
-    <div>
+    <div class="pundit_nav">
       <% if policy(@region).edit? %>
         <%= link_to "Edit #{@region.title.capitalize}", edit_region_path(@region), class:"CTA" %>
       <% end %>

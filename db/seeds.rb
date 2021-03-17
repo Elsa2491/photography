@@ -32,32 +32,32 @@ puts 'Users created. Creating countries'
 # article = Country.new(title: 'NES', description: "A great console")
 # article.image.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
-image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988068/p3uj3fexq00zffqcl66htlukabrm.jpg")
+image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615995411/ky0444i5s7pe5xx0drn14xn9j3dh.jpg")
 country_1 = Country.new(title: "thaïlande", description: "xxx", user_id: admin_1.id)
 country_1.image.attach(io: image_1, filename: 'file.jpg', content_type: 'image/jpg')
 country_1.save
 
-image_2 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988089/a9wedl5l828m2xs2cj2ub9ppkj2d.jpg")
+image_2 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615995428/4vpbrgvgvl53szh1xrqaz9l6vv0r.jpg")
 country_2 = Country.new(title: "south vietnam", description: "xxx", user_id: admin_1.id)
 country_2.image.attach(io: image_2, filename: 'file.jpg', content_type: 'image/jpg')
 country_2.save
 
-image_3 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988100/3trvhs0r7l92ftgbx4agj70q0rsy.jpg")
+image_3 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615995452/ivr48pnudfx161li5ukrgd4r9d1w.jpg")
 country_3 = Country.new(title: "laos", description: "xxx", user_id: admin_1.id)
 country_3.image.attach(io: image_3, filename: 'file.jpg', content_type: 'image/jpg')
 country_3.save
 
-image_4 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988167/h882qojzfgyg5ljlpl8ok7nl3moi.jpg")
+image_4 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615995473/z2xweo6t2ppwfrby2dhl7ea2vah0.jpg")
 country_4 = Country.new(title: "cambodge", description: "xxx", user_id: admin_1.id)
 country_4.image.attach(io: image_4, filename: 'file.jpg', content_type: 'image/jpg')
 country_4.save
 
-image_5 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988121/w3w6iehmudakotlydnlup5i10hgs.jpg")
+image_5 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615995495/s3pdfbc7dujtewcjfg2lm687v1ar.jpg")
 country_5 = Country.new(title: "japan", description: "xxx", user_id: admin_1.id)
 country_5.image.attach(io: image_5, filename: 'file.jpg', content_type: 'image/jpg')
 country_5.save
 
-image_6 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988144/v37b7rzlo87kshjjesal0ifywz5z.jpg")
+image_6 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615995517/9u8y5tfy1sl87j6xjamgf55wesz3.jpg")
 country_6 = Country.new(title: "tawaïn", description: "xxx", user_id: admin_1.id)
 country_6.image.attach(io: image_6, filename: 'file.jpg', content_type: 'image/jpg')
 country_6.save
@@ -70,53 +70,48 @@ puts 'Countries created. Creating regions'
 
 
 
-# region_image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988433/7m7qa781jwrxqo7av5z759fsp7si.jpg")
-# region_1 = Region.new(title: "region 1", description: "region 1", country_id: country_1.id)
-# region_1.image.attach(io: region_image_1, filename: 'file.jpg', content_type: 'image/jpg')
-# region_1.save
+region_image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615996112/s165kcqaq2bwf6921mueo2dvjj3z.jpg")
+region_1 = Region.new(title: "thailande region 1", description: "xx", country_id: country_1.id)
+region_1.image.attach(io: region_image_1, filename: 'file.jpg', content_type: 'image/jpg')
+region_1.save
 
-# region_image_2 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988495/re63grfjtlduxrlm9i40fy9ug39s.jpg")
-# region_2 = Region.new(title: "region 2", description: "region 2", country_id: country_1.id)
-# region_2.image.attach(io: region_image_2, filename: 'file.jpg', content_type: 'image/jpg')
-# region_2.save
+region_image_2 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615996188/vt2bnbrue5fm52d2btjlebud1v62.jpg")
+region_2 = Region.new(title: "thailande region 2", description: "xx", country_id: country_1.id)
+region_2.image.attach(io: region_image_2, filename: 'file.jpg', content_type: 'image/jpg')
+region_2.save
 
-# region_image_3 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988746/71asrj5cglb9zjr0pxesgcazi4jg.jpg")
-# region_3 = Region.new(title: "region 3", description: "region 3", country_id: country_1.id)
-# region_3.image.attach(io: region_image_3, filename: 'file.jpg', content_type: 'image/jpg')
-# region_3.save
+region_image_3 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615996301/216bhtyn9xdaefqhvcfxtfaa15do.jpg")
+region_3 = Region.new(title: "south vietnam region1", description: "xx", country_id: country_2.id)
+region_3.image.attach(io: region_image_3, filename: 'file.jpg', content_type: 'image/jpg')
+region_3.save
 
-# region_image_4 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988826/04ro157pzbhq26q6zg5lr6ly5yhe.jpg")
-# region_4 = Region.new(title: "region 4", description: "region 4", country_id: country_2.id)
-# region_4.image.attach(io: region_image_4, filename: 'file.jpg', content_type: 'image/jpg')
-# region_4.save
-
-# [region_1, region_2, region_3, region_4].each do |region|
-#   puts "Created #{region.title}"
-# end
+[region_1, region_2, region_3].each do |region|
+  puts "Created #{region.title}"
+end
 
 
 
-# puts 'Regions created. Creating photos'
+puts 'Regions created. Creating photos'
 
-# photo_image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988974/otvw6dlefp6h4g4ja9pqm8vaj80v.jpg")
-# photo_1 = Photo.new(title: "photo 1", description: "photo 1", region_id: region_1.id)
-# photo_1.image.attach(io: photo_image_1, filename: 'file.jpg', content_type: 'image/jpg')
-# photo_1.save
+photo_image_1 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615996469/6o4a3bsw5hfejo5pd1koqebpe50e.jpg")
+photo_1 = Photo.new(title: "Thaïlande region 1 photo 1", description: "xx", region_id: region_1.id)
+photo_1.image.attach(io: photo_image_1, filename: 'file.jpg', content_type: 'image/jpg')
+photo_1.save
 
-# photo_image_2 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615988998/wagu92qgce5yl6qn4d57iutmm3sn.jpg")
-# photo_2 = Photo.new(title: "photo 2", description: "photo 2", region_id: region_1.id)
-# photo_2.image.attach(io: photo_image_2, filename: 'file.jpg', content_type: 'image/jpg')
-# photo_2.save
+photo_image_2 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615996529/5e3iswlqqie76wxiywnvgc7exw19.jpg")
+photo_2 = Photo.new(title: "photo 2", description: "photo 2", region_id: region_1.id)
+photo_2.image.attach(io: photo_image_2, filename: 'file.jpg', content_type: 'image/jpg')
+photo_2.save
 
-# photo_image_3 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615989133/vo4qse6qjp2oaaeh5ftv345ori09.jpg")
-# photo_3 = Photo.new(title: "photo 3", description: "photo 3", region_id: region_4.id)
-# photo_3.image.attach(io: photo_image_3, filename: 'file.jpg', content_type: 'image/jpg')
-# photo_3.save
+photo_image_3 = URI.open("https://res.cloudinary.com/elsa-lw/image/upload/v1615996599/s84k5wlq2bdavbm72j1s6itei1ku.jpg")
+photo_3 = Photo.new(title: "photo 3", description: "photo 3", region_id: region_3.id)
+photo_3.image.attach(io: photo_image_3, filename: 'file.jpg', content_type: 'image/jpg')
+photo_3.save
 
 
-# [photo_1, photo_2, photo_3, photo_4].each do |photo|
-#   puts "Created #{photo.title}"
-# end
+[photo_1, photo_2, photo_3].each do |photo|
+  puts "Created #{photo.title}"
+end
 
 
 puts "Finished"
