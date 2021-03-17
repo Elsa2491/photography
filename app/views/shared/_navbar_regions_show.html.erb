@@ -7,7 +7,9 @@
       <% if policy(@region).destroy? %>
         | <%= link_to "Delete #{@region.title.capitalize}", region_path(@region), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@region.title}?"}%> |
       <% end %>
-      <%= link_to "Add region",  new_country_region_path(@region.country), class:"CTA" %>
+      <% if  policy(Region).create? %>
+        <%= link_to "Add region",  new_country_region_path(@region.country), class:"CTA" %>
+      <% end %>
     </div>
 
 
