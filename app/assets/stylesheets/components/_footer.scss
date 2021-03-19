@@ -1,0 +1,41 @@
+.footer {
+  background-color: rgba(0,0,0,0);
+  padding: 0em;
+  margin-top: 2em;
+  margin-bottom: 0.3em;
+  text-align: end;
+}
+
+
+.footer-links a {
+  color: #747474;
+  font-size: 17px;
+  padding: 0px 4px;
+}
+
+
+.footer-links a:hover {
+    text-decoration: none;
+    color: #343A40;
+}
+
+
+
+// @media all and(max-width: 768px)
+// {
+//   .footer {
+//     display: block;
+//   }
+//   .footer-copyright {
+//     text-align: center;
+//   }
+//   .footer-links {
+//     justify-content: center;
+//     margin-top: 15px;
+//   }
+// }
+
+
+.content-wrapper {
+  min-height: calc(100vh - 3px - 80px);
+}
