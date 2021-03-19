@@ -21,15 +21,17 @@
   background-color: #F3F3F3;
 }
 
+
 #photos_wrapper {
   grid-template-columns: repeat(1, 1fr);
-  // grid-gap: 70px;
 }
+
 
 .one_card_info, .CTA {
   color: #747474;
   padding-bottom: 20px;
 }
+
 
 .photos_index {
   color: #d8d8d8;
@@ -40,10 +42,12 @@
   margin-right: 0em;
 }
 
+
 #photos_card_image {
   justify-content: center;
   display: flex;
 }
+
 
 .title_CTA {
   padding-top: 14px;
