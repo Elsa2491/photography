@@ -20,7 +20,7 @@
       <% end %>
 
       <% if user_signed_in? %>
-        <%= link_to "Back", country_path(@region.country), class:"CTA" %> |
+        <%= link_to "Back", country_path(@region.country), class:"CTA" %>
       <% else %>
         <%= link_to "Back", :back, class:"CTA" %> |
       <% end %>
