@@ -9,11 +9,6 @@
 }
 
 
-.caption img {
-  width: 300px;
-  height: 300px;
-}
-
 .caption {
   position: absolute;
   left: 0;
@@ -27,8 +22,8 @@
 .banner_title{
   color: #F3F3F3;
   padding: 18px;
-  font-size: 35px;
-  letter-spacing: 11px;
+  font-size: 45px;
+  letter-spacing: 13px;
   text-shadow: 0 0 1px #ADB5BD;
   font-weight: 600;
 }
@@ -39,12 +34,28 @@
 }
 
 
-.banner_text {
+.banner_text, .banner_name {
   color: #F3F3F3;
   letter-spacing: 4px;
-  padding-top: 15px;
   text-shadow: 0 0 1px #ADB5BD;
+  padding-top: 15px;
 }
 
 
+.banner_text {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.banner_name {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+
+.chevron {
+  color: #F3F3F3;
+  margin-top: 130px;
+}
 
