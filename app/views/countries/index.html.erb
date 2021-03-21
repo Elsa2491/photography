@@ -1,7 +1,8 @@
 <div class="banner">
   <%= render 'shared/navbar_home' %>
   <div class="caption">
-    <span class="banner_title" id="banner_title">READY TO TRAVEL?</span>
+    <%#= image_tag "favicon22.jpg"%>
+    <span class="banner_title" id="banner_title">FAGUOREN</span>
     <p class="banner_text">Mathieu Tremblay - Photography</p>
   </div>
 </div>
@@ -14,7 +15,7 @@
         <div class="card_image">
           <%= link_to country_path(country) do %>
             <%= cl_image_tag country.image.key, alt: "", :secure => true, :width=>300, :dpr=>2.0,
-            :crop=>"scale", :aspect_ratio=>"2:3", :radius => 5, :quality=>100, :background=>"#F3F3F3"%>
+            :crop=>"scale", :aspect_ratio=>"2:3", :quality=>100, :background=>"#F3F3F3"%>
           <% end %>
         </div>
 

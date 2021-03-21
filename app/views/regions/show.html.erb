@@ -21,10 +21,10 @@
           </div>
 
           <%= cl_image_tag photo.image.key, alt: "", :secure => true, :height=>550,  :dpr=>2.0,
-          :crop=>"scale", :radius => 5, :quality=>100, :background=>"#F3F3F3" %>
+          :crop=>"scale", :quality=>100, :background=>"#F3F3F3" %>
 
         <div class="photos_titles">
-        <%= photo.title.capitalize %> - <%= photo.description %>
+        <%= photo.title.capitalize %> <%= photo.description %>
         </div>
 
         <% if policy(photo).edit? %>
