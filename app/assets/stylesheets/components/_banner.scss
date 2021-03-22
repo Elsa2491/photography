@@ -81,17 +81,20 @@
 
   .banner, .form_new_country {
     background-image: asset-url('cover_iphone_2.jpeg');
-   background-position: initial;
+    background-attachment: fixed;
+    background-position: initial;
+    background-repeat: no-repeat;
     background-size: auto;
-    }
+    height: 102vh;
+  }
 
 
   .chevron {
-     margin-top: 45px;
+    margin-top: 70px;
   }
 
   .banner_title{
-    font-size: 32px;
+    font-size: 25px;
     letter-spacing: 8px;
   }
 
@@ -101,7 +104,8 @@
 
 
   .banner_text {
-    font-weight: 200;
+    font-weight: 100;
+    font-size: 12px;
   }
 
 
