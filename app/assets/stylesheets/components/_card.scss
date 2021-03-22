@@ -102,11 +102,11 @@
 
 
 @media all and (max-width: 1600px) {
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 70px; // c'est ça qu'il faut changer
-  background-color: #F3F3F3;
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 70px; // c'est ça qu'il faut changer
+    background-color: #F3F3F3;
   }
 }
 
