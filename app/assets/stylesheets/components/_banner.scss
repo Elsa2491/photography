@@ -61,6 +61,9 @@
 }
 
 
+/////////
+
+
 @media all and (min-width: 1500px) {
   .chevron {
      margin-top: 270px;
@@ -70,5 +73,31 @@
 @media all and (max-width: 1000px) {
 .chevron {
      margin-top: 170px;
+  }
+}
+
+///////////:
+@media all and (max-width: 730px) {
+  .chevron {
+     margin-top: 160px;
+  }
+
+  .banner_title{
+    font-size: 32px;
+    letter-spacing: 8px;
+  }
+
+  .banner_text, .banner_name {
+    letter-spacing: 0px;
+  }
+
+
+  .banner_text {
+    font-weight: 200;
+  }
+
+
+  .banner_name {
+    font-size: 16px;
   }
 }
