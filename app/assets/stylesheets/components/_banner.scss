@@ -80,8 +80,7 @@
 @media all and (max-width: 730px) {
 
   .banner, .form_new_country {
-    width: 142px;
-    height: 170px;
+    background-image: asset-url('cover_iphone.jpeg');
   }
 
   .chevron {
