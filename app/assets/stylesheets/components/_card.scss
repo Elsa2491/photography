@@ -14,13 +14,6 @@
 }
 
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
-  background-color: #F3F3F3;
-}
-
 
 #photos_wrapper {
   grid-template-columns: repeat(1, 1fr);
@@ -73,5 +66,64 @@
 
 .pundit_CTA {
   padding-top: 11px;
+}
+
+
+
+@media all and (min-width: 1500px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 70px; // c'est ça qu'il faut changer
+    background-color: #F3F3F3;
+  }
+}
+
+@media all and (min-width: 2000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 90px; // c'est ça qu'il faut changer
+    background-color: #F3F3F3;
+  }
+}
+
+@media all and (min-width: 2500px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 90px; // c'est ça qu'il faut changer
+    background-color: #F3F3F3;
+  }
+  .chevron {
+     margin-top: 300px;
+  }
+}
+
+
+@media all and (max-width: 1600px) {
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px; // c'est ça qu'il faut changer
+  background-color: #F3F3F3;
+  }
+}
+
+@media all and (max-width: 1080px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 80px; // c'est ça qu'il faut changer
+    background-color: #F3F3F3;
+  }
+}
+
+@media all and (max-width: 730px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #F3F3F3;
+  }
 }
 
