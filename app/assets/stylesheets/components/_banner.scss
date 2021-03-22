@@ -60,3 +60,15 @@
   margin-top: 185px;
 }
 
+
+@media all and (min-width: 1500px) {
+  .chevron {
+     margin-top: 270px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+.chevron {
+     margin-top: 170px;
+  }
+}
