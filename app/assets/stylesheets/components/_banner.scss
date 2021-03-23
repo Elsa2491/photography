@@ -85,8 +85,6 @@
 
 // // small phones from 0 to 480px
 @media only screen and (max-width: 480px) {
-  .banner {
-    width: 110%;
   }
   .caption {
   position: absolute;
@@ -145,9 +143,9 @@
   .banner, .form_new_country {
     background-image: asset-url('cover_iphone.jpeg');
     background-attachment: fixed;
-    background-position: initial;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
   }
   .chevron {
     margin-top: 100px;
