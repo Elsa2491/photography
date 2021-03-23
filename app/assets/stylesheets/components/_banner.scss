@@ -125,17 +125,16 @@
   }
 }
 
-@media all and (max-width: 730px) {
-   .banner, .form_new_country {
-    background-image: asset-url('cover_iphone.jpeg');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
+
+@media all and (max-width: 730px) {
+  .banner, .form_new_country {
+    background-image: asset-url('cover_iphone.jpeg');
+    background-attachment: fixed;
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
   .chevron {
     margin-top: 100px;
   }
@@ -154,6 +153,7 @@
     font-size: 16px;
   }
 }
+
 
 // @media all and (max-width: 380px) {
 //    .banner, .form_new_country {
