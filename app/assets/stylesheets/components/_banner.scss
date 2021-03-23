@@ -64,70 +64,7 @@
 
 
 
-@media all and (min-width: 1500px) {
-  .banner, .form_new_country {
-    background-image: asset-url('cover_mathieu.JPG');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-@media all and (min-width: 2000px) {
-   .banner, .form_new_country {
-    background-image: asset-url('cover_mathieu.JPG');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-@media all and (min-width: 2500px) {
-   .banner, .form_new_country {
-    background-image: asset-url('cover_mathieu.JPG');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-
-@media all and (max-width: 1600px) {
-   .banner, .form_new_country {
-    background-image: asset-url('cover_mathieu.JPG');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-@media all and (max-width: 1080px) {
-   .banner, .form_new_country {
-    background-image: asset-url('cover_mathieu.JPG');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;background-color: #F3F3F3;
-  }
-}
-
-
-
-@media all and (max-width: 730px) { // iphone SE ok
+@media all and (max-width: 300px) { // iphone SE ok
   .banner, .form_new_country {
     background-image: asset-url('cover_iphone.jpeg');
     background-attachment: fixed;
@@ -138,7 +75,7 @@
   .chevron {
     margin-top: 100px;
   }
-  .banner_title{
+  .banner_title {
     font-size: 25px;
     letter-spacing: 8px;
   }
@@ -164,20 +101,57 @@
     background-size: cover;
   }
   .chevron {
-    margin-top: 100px;
+    margin-top: 300px;
   }
-  .banner_title{
-    font-size: 25px;
-    letter-spacing: 8px;
-  }
-  .banner_text, .banner_name {
-    letter-spacing: 0px;
+  .banner_title {
+    font-size: 32px;
   }
   .banner_text {
-    font-weight: 200;
-    font-size: 12px;
+    font-size: 14px;
   }
   .banner_name {
-    font-size: 16px;
+    font-size: 18px;
+  }
+}
+
+
+@media (min-height: 740px) { // iphone6/7/8plus ok ?
+  .banner, .form_new_country {
+    background-image: asset-url('cover_iphone.jpeg');
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .chevron {
+    margin-top: 300px;
+  }
+  .banner_title{
+    font-size: 32px;
+  }
+  .banner_text {
+    font-size: 14px;
+  }
+  .banner_name {
+    font-size: 18px;
+  }
+}
+
+@media (max-height: 570px) { // iphone6/7/8plus ok ?
+  .banner, .form_new_country {
+    background-image: asset-url('cover_iphone.jpeg');
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner_title{
+    font-size: 21px;
+  }
+  .banner_text {
+    font-size: 9px;
+  }
+  .banner_name {
+    font-size: 14px;
   }
 }
