@@ -1,4 +1,4 @@
-@media all and (max-width: 1600px) { // code de base
+@media (max-width: 1600px) { // code de base
   .banner, .form_new_country {
     background-image: asset-url('cover_mathieu.JPG');
     height: 100vh;
@@ -8,7 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
 
 .caption {
   position: absolute;
@@ -106,7 +105,7 @@
   .banner, .form_new_country {
     background-image: asset-url('cover_iphone.jpeg');
     background-attachment: fixed;
-    background-position: initial;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: auto;
   }
@@ -134,3 +133,19 @@
     font-size: 16px;
   }
 }
+
+
+@media all and (max-width: 375px) {
+  .banner, .form_new_country {
+    background-image: asset-url('cover_iphoneX.jpeg');
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .chevron {
+    margin-top: 300px;
+  }
+}
+
