@@ -140,8 +140,59 @@
 }
 }
 
-@media only screen and (max-width: 350px) {
-  .banner {
-    background-image: url('cover_iphone_2.jpeg');
+
+@media all and (max-width: 400px) { // iphone SE ok
+  .banner, .form_new_country {
+    background-image: asset-url('cover_iphone.jpeg');
+    background-attachment: fixed;
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  .chevron {
+    margin-top: 100px;
+  }
+  .banner_title {
+    font-size: 25px;
+    letter-spacing: 8px;
+  }
+  .banner_text, .banner_name {
+    letter-spacing: 0px;
+  }
+  .banner_text {
+    font-weight: 200;
+    font-size: 12px;
+  }
+  .banner_name {
+    font-size: 16px;
   }
 }
+
+
+@media all and (min-height: 810px) { // iphoneX ok ?
+  .banner, .form_new_country {
+    background-image: asset-url('cover_iphone.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .chevron {
+    margin-top: 300px;
+  }
+  .banner_title {
+    font-size: 32px;
+  }
+  .banner_text {
+    font-size: 14px;
+  }
+  .banner_name {
+    font-size: 18px;
+  }
+}
+
+// @media only screen and (max-width: 350px) {
+//   .banner {
+//     background-image: url('cover_iphone_2.jpeg');
+//   }
+// }
