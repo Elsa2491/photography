@@ -1,4 +1,4 @@
-@media (max-width: 1600px) { // code de base
+//@media (max-width: 1600px) { // code de base
   .banner, .form_new_country {
     background-image: asset-url('cover_mathieu.JPG');
     height: 100vh;
@@ -60,92 +60,127 @@
   margin-top: 185px;
 }
 
+//}
+
+
+
+@media all and (min-width: 1500px) {
+  .banner, .form_new_country {
+    background-image: asset-url('cover_mathieu.JPG');
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media all and (min-width: 2000px) {
+   .banner, .form_new_country {
+    background-image: asset-url('cover_mathieu.JPG');
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media all and (min-width: 2500px) {
+   .banner, .form_new_country {
+    background-image: asset-url('cover_mathieu.JPG');
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 
-///////////:
-@media all and (max-width: 700px) {
-
-  .banner, .form_new_country {
-    background-image: asset-url('cover_iphone.jpeg');
+@media all and (max-width: 1600px) {
+   .banner, .form_new_country {
+    background-image: asset-url('cover_mathieu.JPG');
+    height: 100vh;
+    width: 100%;
     background-attachment: fixed;
-    background-position: initial;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+  }
+}
+
+@media all and (max-width: 1080px) {
+   .banner, .form_new_country {
+    background-image: asset-url('cover_mathieu.JPG');
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;background-color: #F3F3F3;
+  }
+}
+
+@media all and (max-width: 730px) {
+   .banner, .form_new_country {
+    background-image: asset-url('cover_iphone.jpeg');
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .chevron {
     margin-top: 100px;
   }
-
   .banner_title{
     font-size: 25px;
     letter-spacing: 8px;
   }
-
   .banner_text, .banner_name {
     letter-spacing: 0px;
   }
-
-
   .banner_text {
     font-weight: 200;
     font-size: 12px;
   }
-
-
   .banner_name {
     font-size: 16px;
   }
 }
 
-
-
-@media all and (max-width: 690px) {
-  .banner, .form_new_country {
+@media all and (max-width: 380px) {
+   .banner, .form_new_country {
     background-image: asset-url('cover_iphone.jpeg');
+    height: 100vh;
+    width: 100%;
     background-attachment: fixed;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
-  }
-  .chevron {
-    margin-top: 100px;
-  }
-
-  .banner_title{
-    font-size: 25px;
-    letter-spacing: 8px;
-  }
-
-  .banner_text, .banner_name {
-    letter-spacing: 0px;
-  }
-
-
-  .banner_text {
-    font-weight: 200;
-    font-size: 12px;
-  }
-
-
-  .banner_name {
-    font-size: 16px;
-  }
-}
-
-
-@media all and (max-width: 375px) {
-  .banner, .form_new_country {
-    background-image: asset-url('cover_iphoneX.jpeg');
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
   }
 
   .chevron {
     margin-top: 300px;
   }
+  .banner_title{
+    font-size: 25px;
+    letter-spacing: 8px;
+  }
+  .banner_text, .banner_name {
+    letter-spacing: 0px;
+  }
+  .banner_text {
+    font-weight: 200;
+    font-size: 12px;
+  }
+  .banner_name {
+    font-size: 16px;
+  }
 }
-
