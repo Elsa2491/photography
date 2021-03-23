@@ -19,7 +19,7 @@
 }
 
 
-.banner_title{
+.banner_title {
   color: #F3F3F3;
   margin-left: 10px;
   padding: 18px;
@@ -60,30 +60,91 @@
   margin-top: 185px;
 }
 
-
 //  from big tablets to 1200px
 @media only screen and (max-width: 1200px) {
+  .banner {
 
+  }
 }
 
 // small tablets to bigs one : from 768 to 1032px
 @media only screen and (max-width: 1032px) {
+  .banner {
 
+  }
 }
 
 // medium phones to ipad & tablets : from 481 to 767PX
 @media only screen and (max-width: 767px) {
-  background-image: url('cover_device.jpeg')
+  .banner {
+
+   }
 }
 
-// small phones from 0 to 480px
+
+// // small phones from 0 to 480px
 @media only screen and (max-width: 480px) {
-  background-image: url('cover_device.jpeg')
+  .banner {
+    width: 110%;
+  }
+  .caption {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #000;
 }
 
-// @media only screen and (max-width: 320px) {
-//   background-image: url('cover_mathieu.JPG')
-// }
+
+.banner_title {
+  color: #F3F3F3;
+  margin-left: 10px;
+  padding: 18px;
+  font-size: 48px;
+  letter-spacing: 13px;
+  text-shadow: 0 0 1px #ADB5BD;
+  font-weight: 600;
+}
+
+
+#banner_title {
+  border: none !important;
+}
+
+
+.banner_text, .banner_name {
+  color: #F3F3F3;
+  letter-spacing: 4px;
+  text-shadow: 0 0 1px #ADB5BD;
+  padding-top: 15px;
+}
+
+
+.banner_text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+.banner_name {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+
+.chevron {
+  color: #F3F3F3;
+  margin-top: 185px;
+}
+}
+
+@media only screen and (max-width: 350px) {
+  .banner {
+    width: 120%;
+  }
+}
+
 
 // @media all and (max-width: 400px) { // iphone SE ok
 //   .banner, .form_new_country {
@@ -177,3 +238,39 @@
 //     font-size: 14px;
 //   }
 // }
+
+// @media only screen and (min-width: 960px) {
+//   .banner {
+//     width: 960px
+//     // height: auto;
+//   }
+// }
+
+// @media only screen and (min-width: 1440px) {
+//   .banner {
+//     width: 1440px
+//     // height: auto;
+//   }
+// }
+
+// @media only screen and (min-width: 2000px) {
+//   .banner {
+//     width: 2000px
+//     //height: auto;
+//   }
+// }
+
+// @media only screen and (max-device-width: 480px) {
+//   .banner {
+//     width: 480px
+//    // height: auto;
+//   }
+// }
+
+// @media only screen and (device-width: 768px) {
+//   .banner {
+//     width: 768px
+//    //  height: auto;
+//   }
+// }
+
