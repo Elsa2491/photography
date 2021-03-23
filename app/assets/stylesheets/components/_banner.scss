@@ -1,13 +1,13 @@
-//@media (max-width: 1600px) { // code de base
-  .banner, .form_new_country {
-    background-image: asset-url('cover_mathieu.JPG');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+// code de base
+.banner, .form_new_country {
+  background-image: url('cover_mathieu.JPG');
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .caption {
   position: absolute;
@@ -60,98 +60,120 @@
   margin-top: 185px;
 }
 
-//}
 
+//  from big tablets to 1200px
+@media only screen and (max-width: 1200px) {
 
-
-@media all and (max-width: 400px) { // iphone SE ok
-  .banner, .form_new_country {
-    background-image: asset-url('cover_iphone.jpeg');
-    background-attachment: fixed;
-    background-position: initial;
-    background-repeat: no-repeat;
-    background-size: auto;
-  }
-  .chevron {
-    margin-top: 100px;
-  }
-  .banner_title {
-    font-size: 25px;
-    letter-spacing: 8px;
-  }
-  .banner_text, .banner_name {
-    letter-spacing: 0px;
-  }
-  .banner_text {
-    font-weight: 200;
-    font-size: 12px;
-  }
-  .banner_name {
-    font-size: 16px;
-  }
 }
 
+// small tablets to bigs one : from 768 to 1032px
+@media only screen and (max-width: 1032px) {
 
-@media all and (min-height: 810px) { // iphoneX ok ?
-  .banner, .form_new_country {
-    background-image: asset-url('cover_iphone.jpeg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .chevron {
-    margin-top: 300px;
-  }
-  .banner_title {
-    font-size: 32px;
-  }
-  .banner_text {
-    font-size: 14px;
-  }
-  .banner_name {
-    font-size: 18px;
-  }
 }
 
-
-@media (min-height: 740px) { // iphone6/7/8plus ok ?
-  .banner, .form_new_country {
-    background-image: asset-url('cover_iphone.jpeg');
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .chevron {
-    margin-top: 300px;
-  }
-  .banner_title{
-    font-size: 32px;
-  }
-  .banner_text {
-    font-size: 14px;
-  }
-  .banner_name {
-    font-size: 18px;
-  }
+// medium phones to ipad & tablets : from 481 to 767PX
+@media only screen and (max-width: 767px) {
+  background-image: url('cover_device.jpeg')
 }
 
-@media (min-height: 640px) { // iphone6/7/8plus ok ?
-  .banner, .form_new_country {
-    background-image: asset-url('cover_iphone.jpeg');
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .banner_title{
-    font-size: 21px;
-  }
-  .banner_text {
-    font-size: 9px;
-  }
-  .banner_name {
-    font-size: 14px;
-  }
+// small phones from 0 to 480px
+@media only screen and (max-width: 480px) {
+  background-image: url('cover_device.jpeg')
 }
+
+@media only screen and (max-width: 320px) {
+  background-image: url('cover_mathieu.JPG')
+}
+
+// @media all and (max-width: 400px) { // iphone SE ok
+//   .banner, .form_new_country {
+//     background-image: asset-url('cover_iphone.jpeg');
+//     background-attachment: fixed;
+//     background-position: initial;
+//     background-repeat: no-repeat;
+//     background-size: auto;
+//   }
+//   .chevron {
+//     margin-top: 100px;
+//   }
+//   .banner_title {
+//     font-size: 25px;
+//     letter-spacing: 8px;
+//   }
+//   .banner_text, .banner_name {
+//     letter-spacing: 0px;
+//   }
+//   .banner_text {
+//     font-weight: 200;
+//     font-size: 12px;
+//   }
+//   .banner_name {
+//     font-size: 16px;
+//   }
+// }
+
+
+// @media all and (min-height: 810px) { // iphoneX ok ?
+//   .banner, .form_new_country {
+//     background-image: asset-url('cover_iphone.jpeg');
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+//   .chevron {
+//     margin-top: 300px;
+//   }
+//   .banner_title {
+//     font-size: 32px;
+//   }
+//   .banner_text {
+//     font-size: 14px;
+//   }
+//   .banner_name {
+//     font-size: 18px;
+//   }
+// }
+
+
+// @media (min-height: 740px) { // iphone6/7/8plus ok ?
+//   .banner, .form_new_country {
+//     background-image: asset-url('cover_iphone.jpeg');
+//     background-attachment: fixed;
+//     background-position: top;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+//   .chevron {
+//     margin-top: 300px;
+//   }
+//   .banner_title{
+//     font-size: 32px;
+//   }
+//   .banner_text {
+//     font-size: 14px;
+//   }
+//   .banner_name {
+//     font-size: 18px;
+//   }
+// }
+
+
+// @media (min-height: 640px) { // iphone6/7/8plus ok ?
+//   .banner, .form_new_country {
+//     background-image: asset-url('cover_iphone.jpeg');
+//     background-attachment: fixed;
+//     background-position: top;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+//   .banner_title{
+//     font-size: 21px;
+//   }
+//   .banner_text {
+//     font-size: 9px;
+//   }
+//   .banner_name {
+//     font-size: 14px;
+//   }
+// }
