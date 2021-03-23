@@ -155,32 +155,32 @@
   }
 }
 
-@media all and (max-width: 380px) {
-   .banner, .form_new_country {
-    background-image: asset-url('cover_iphone.jpeg');
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+// @media all and (max-width: 380px) {
+//    .banner, .form_new_country {
+//     background-image: asset-url('cover_iphone.jpeg');
+//     height: 100vh;
+//     width: 100%;
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
 
-  .chevron {
-    margin-top: 300px;
-  }
-  .banner_title{
-    font-size: 25px;
-    letter-spacing: 8px;
-  }
-  .banner_text, .banner_name {
-    letter-spacing: 0px;
-  }
-  .banner_text {
-    font-weight: 200;
-    font-size: 12px;
-  }
-  .banner_name {
-    font-size: 16px;
-  }
-}
+//   .chevron {
+//     margin-top: 300px;
+//   }
+//   .banner_title{
+//     font-size: 25px;
+//     letter-spacing: 8px;
+//   }
+//   .banner_text, .banner_name {
+//     letter-spacing: 0px;
+//   }
+//   .banner_text {
+//     font-weight: 200;
+//     font-size: 12px;
+//   }
+//   .banner_name {
+//     font-size: 16px;
+//   }
+// }
