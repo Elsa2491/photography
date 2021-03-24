@@ -1,7 +1,6 @@
 // code de base
 .banner, .form_new_country {
-  // background-image: url('cover_mathieu.JPG');
-  background-image: url('github_super_grande_image.jpeg');
+  background-image: url('cover_mathieu.JPG');
   width: 100%;
   height: 100vh;
   background-attachment: fixed;
@@ -65,7 +64,7 @@
 
 @media all and (max-width: 767px) {
   .banner {
-     background-image: url('github_grande_image.jpeg');
+     background-image: url('cover_iphone5.jpeg');
   }
   .banner_title {
     margin-left: 5px;
