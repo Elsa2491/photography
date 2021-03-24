@@ -1,8 +1,8 @@
 // code de base
 .banner, .form_new_country {
   background-image: url('cover_mathieu.JPG');
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -58,4 +58,45 @@
 .chevron {
   color: #F3F3F3;
   margin-top: 185px;
+}
+
+
+
+@media all and (max-width: 767px) {
+  .banner {
+     background-image: url('cover_device.jpeg');
+  }
+}
+
+@media all and (max-width: 480px) {
+  .banner {
+     background-image: url('cover_iphone_3.png');
+  }
+
+  .banner_title {
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 29px;
+    letter-spacing: 10px;
+  }
+
+  .banner_text, .banner_name {
+    color: #F3F3F3;
+    letter-spacing: 4px;
+    text-shadow: 0 0 1px #ADB5BD;
+    padding-top: 15px;
+  }
+
+  .banner_text {
+    font-size: 13px;
+    font-weight: 200;
+  }
+
+  .banner_name {
+    font-size: 17px;
+  }
+
+  .chevron {
+    margin-top: 290px;
+  }
 }
