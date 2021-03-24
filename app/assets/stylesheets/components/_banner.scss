@@ -67,6 +67,8 @@
 @media all and (max-width: 767px) and (orientation : portrait)  {
   .banner {
     background-image: url('cover_iphone.jpeg');
+    max-width: 767px;
+    height: 100vh;
   }
   .banner_title {
     margin-left: 5px;
