@@ -70,7 +70,9 @@
 
 @media all and (max-width: 480px) {
   .banner {
-     background-image: url('cover_iphone_3.png');
+    background-image: url('cover_iphone_3.png');
+    background-position: top;
+    background-size: contain;
   }
 
   .banner_title {
