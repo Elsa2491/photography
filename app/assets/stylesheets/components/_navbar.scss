@@ -49,3 +49,10 @@
   background-color: #F3F3F3;
   justify-content: space-between;
 }
+
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none !important;
+  }
+}
