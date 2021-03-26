@@ -13,7 +13,7 @@
 
 
     <% if policy(@region).edit? %>
-      <%= "#{@region.title.capitalize}" %>
+      <%= "#{@region.title.capitalize} :" %>
       <%= link_to edit_region_path(@region), class:"CTA" do %>
         <i class="fas fa-edit"></i>
       <% end %>
@@ -21,7 +21,7 @@
 
     <% if policy(@region).destroy? %>
       <%= link_to region_path(@region), class:"CTA", method: :delete, data: { confirm: "Es-tu sûr de vouloir supprimer #{@region.title} ?"} do %>
-        <i class="fas fa-trash" id="nav_trash"></i>
+        <i class="fas fa-trash" id="nav_delete"></i>
       <% end %>
     <% end %>
 
@@ -32,10 +32,10 @@
 
   <div class="nav_margin">
     <% if policy(Photo).create? %>
-      <%= link_to "Add photo", new_region_photo_path(@region), class:"CTA" %> |
+      <%= link_to "Add photo", new_region_photo_path(@region), class:"CTA" %>
     <% end %>
     <%= link_to root_path, class:"CTA" do %>
-      <i class="fas fa-home"></i>
+      <i class="fas fa-home" id="nav_home"></i>
     <% end %>
     <% if user_signed_in? %>
       <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
