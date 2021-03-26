@@ -8,7 +8,7 @@
         <% end %>
       <% end %>
       <% if policy(@country).destroy? %>
-         <%= link_to country_path(@country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"} do %>
+         <%= link_to country_path(@country), class:"CTA", method: :delete, data: { confirm: "Es-tu sûr de vouloir supprimer #{@country.title} ?"} do %>
            <i class="fas fa-trash"></i>
           <% end %>
       <% end %>
