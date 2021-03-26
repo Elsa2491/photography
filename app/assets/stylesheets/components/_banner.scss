@@ -64,14 +64,12 @@
 
 
 
-@media all and (max-width: 767px) and (orientation : portrait)  { // iphone SE okay
+@media all and (max-width: 767px) and (orientation : portrait)  { // iphone 12 pro okay ?
   .banner {
     background-image: url('cover_iphone.jpeg');
     background-attachment: fixed;
-    max-width: 767px;
-    max-height: 926px;
     background-position: center;
-    background-size: initial;
+    background-size: cover;
   }
   .banner_title {
     margin-left: 5px;
@@ -97,6 +95,8 @@
     margin-top: 100px;
   }
 }
+
+
 @media all and (max-width: 320px) and (orientation : portrait)  { // iphone SE okay
   .banner {
     background-image: url('cover_iphone.jpeg');
