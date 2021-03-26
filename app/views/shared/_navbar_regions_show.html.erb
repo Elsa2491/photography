@@ -26,13 +26,13 @@
     <% end %>
 
     <% if  policy(Region).create? %>
-      - <%= link_to "Add region",  new_country_region_path(@region.country), class:"CTA" %>
+      - <%= link_to "Ajouter une région",  new_country_region_path(@region.country), class:"CTA" %>
     <% end %>
   </div>
 
   <div class="nav_margin">
     <% if policy(Photo).create? %>
-      <%= link_to "Add photo", new_region_photo_path(@region), class:"CTA" %>
+      <%= link_to "Ajouter une photo", new_region_photo_path(@region), class:"CTA" %>
     <% end %>
     <%= link_to root_path, class:"CTA" do %>
       <i class="fas fa-home" id="nav_home"></i>
