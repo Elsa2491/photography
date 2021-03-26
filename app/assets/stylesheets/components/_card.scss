@@ -131,3 +131,9 @@
   }
 }
 
+@media all and (max-width: 330px) {
+  #photos_wrapper img {
+    max-width: 298px;
+    max-height: 175px;
+  }
+}

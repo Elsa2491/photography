@@ -67,6 +67,8 @@
 @media all and (max-width: 767px) and (orientation : portrait)  { // iphone 12 pro okay ?
   .banner {
     background-image: url('cover_iphone.jpeg');
+    max-width: 767px;
+    max-height: 926px;
     background-position: center;
     background-size: cover;
   }
