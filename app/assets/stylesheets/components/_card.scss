@@ -131,9 +131,31 @@
   }
 }
 
+@media all and (max-width: 560px) {
+  #photos_wrapper img {
+    max-width: 480px;
+    max-height: 350px;
+  }
+}
+
+@media all and (max-width: 428px) {
+  #photos_wrapper img {
+    max-width: 420px;
+    max-height: 260px;
+  }
+}
+
+@media all and (max-width: 390px) {
+  #photos_wrapper img {
+    max-width: 360px;
+    max-height: 250px;
+  }
+}
+
+
 @media all and (max-width: 330px) {
   #photos_wrapper img {
-    max-width: 298px;
-    max-height: 175px;
+    max-width: 300px;
+    max-height: 190px;
   }
 }
