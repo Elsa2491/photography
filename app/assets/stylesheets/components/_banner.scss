@@ -95,13 +95,28 @@
   .chevron {
     margin-top: 100px;
   }
+ }
+
+@media all and (max-width: 428px) {
+   .banner {
+    background-image: url('max_width_428.jpeg');
+  }
 }
 
+@media all and (max-width: 390px) {
+  .banner {
+    background-image: url('max_width_390.jpeg');
+  }
+}
+
+@media all and (max-width: 375px) {
+   .banner {
+    background-image: url('max_width_375.jpeg');
+  }
+}
 
 @media all and (max-width: 320px) and (orientation : portrait)  { // iphone SE okay
   .banner {
-    background-image: url('cover_iphone.jpeg');
-    background-position: top;
-    background-size: initial;
+    background-image: url('max_width_320.jpeg');
   }
 }
