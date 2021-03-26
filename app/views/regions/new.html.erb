@@ -4,7 +4,7 @@
 
         <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
           <div class="form_title">
-            <%= 'Add a region'.upcase %>
+            <%= 'Ajouter une région'.upcase %>
           </div>
 
           <%= simple_form_for([@country, @region]) do |f| %>
@@ -15,8 +15,12 @@
           <% end %>
 
           <div class="form_links">
-            <%= link_to 'Back', country_path(@country) %> |
-            <%= link_to 'Home', root_path  %>
+            <%= link_to country_path(@country), class:"CTA" do %>
+              <i class="fas fa-chevron-left"></i>
+            <% end %>
+            <%= link_to root_path, class:"CTA" do %>
+              <i class="fas fa-home"></i>
+            <% end %>
           </div>
         </div>
 

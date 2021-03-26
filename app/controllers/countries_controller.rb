@@ -23,7 +23,7 @@ class CountriesController < ApplicationController
     @country.user = current_user
     authorize @country
     if @country.save
-      redirect_to root_path, notice: "Your country was successfully created"
+      redirect_to root_path, notice: "Pays créé"
     else
       render :new
     end
@@ -34,13 +34,13 @@ class CountriesController < ApplicationController
 
   def update
     @country.update(country_params)
-    redirect_to root_path, notice: "Your country was successfuly updated"
+    redirect_to root_path, notice: "Pays modifié"
   end
 
   def destroy
     @country.user = current_user
     @country.destroy
-    redirect_to root_path, notice: "Your country was successfully deleted"
+    redirect_to root_path, notice: "Pays supprimé"
   end
 
   private

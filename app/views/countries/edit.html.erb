@@ -4,7 +4,7 @@
 
         <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
           <div class="form_title">
-            <%= "Edit #{@country.title.capitalize}" %>
+            <%= "Modifier #{@country.title.capitalize}" %>
           </div>
           <%= simple_form_for @country do |f| %>
             <%= f.input :title %>
@@ -14,7 +14,9 @@
           <% end %>
 
           <div class="form_links">
-          <%= link_to "Home", root_path %>
+          <%= link_to root_path, class:"CTA" do %>
+            <i class="fas fa-home"></i>
+          <% end %>
           </div>
        </div>
 

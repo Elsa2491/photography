@@ -30,10 +30,14 @@
 
         <div class="pundit_CTA">
             <% if policy(region).edit? %>
-              <%= link_to "Edit #{region.title.capitalize}", edit_region_path(region), class:"CTA" %> |
+              <%= link_to edit_region_path(region), class:"CTA" do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
             <% end %>
             <% if policy(region).destroy? %>
-              <%= link_to "Delete #{region.title.capitalize}", region_path(region), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{region.title}?"}%>
+              <%= link_to region_path(region), class:"CTA", method: :delete, data: { confirm: "Es-tu sûr de vouloir supprimer #{region.title} ?"} do %>
+                <i class="fas fa-trash"></i>
+              <% end %>
             <% end %>
         </div>
 

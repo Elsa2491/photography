@@ -2,21 +2,28 @@
 
     <div class="pundit_nav">
       <% if policy(@country).edit? %>
-        <%= link_to "Edit #{@country.title.capitalize}", edit_country_path(@country), class:"CTA" %>
+        <%= "#{@country.title.capitalize}" %>
+        <%= link_to edit_country_path(@country), class:"CTA" do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
       <% end %>
       <% if policy(@country).destroy? %>
-        | <%= link_to "Delete #{@country.title.capitalize}", country_path(@country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"}%>
+         <%= link_to country_path(@country), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@country.title}?"} do %>
+           <i class="fas fa-trash"></i>
+          <% end %>
       <% end %>
     </div>
 
 
     <div class="nav_margin">
       <% if policy(Region).create? %>
-        <%= link_to "Add a region", new_country_region_path(@country), class:"CTA" %> |
+        <%= link_to "Ajouter une région", new_country_region_path(@country), class:"CTA" %> |
       <% end %>
 
 
-      <%= link_to "Home", root_path, class:"CTA" %>
+      <%= link_to root_path, class:"CTA" do %>
+        <i class="fas fa-home"></i>
+      <% end %>
 
       <% if user_signed_in? %>
         <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -28,7 +35,7 @@
 
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         <% end %>
       </div>
     </div>

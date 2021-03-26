@@ -1,45 +1,60 @@
 <div class="navbar sticky nav_countries_show" >
 
-    <div class="pundit_nav">
-      <% if policy(@region).edit? %>
-        <%= link_to "Edit #{@region.title.capitalize}", edit_region_path(@region), class:"CTA" %>
+  <div class="nav_margin">
+    <% if user_signed_in? %>
+      <%= link_to country_path(@region.country), class:"CTA" do %>
+        <i class="fas fa-chevron-left"></i>
       <% end %>
-      <% if policy(@region).destroy? %>
-        | <%= link_to "Delete #{@region.title.capitalize}", region_path(@region), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@region.title}?"}%> |
+    <% else %>
+      <%= link_to :back, class:"CTA" do %>
+      <i class="fas fa-chevron-left"></i>
       <% end %>
-      <% if  policy(Region).create? %>
-        <%= link_to "Add region",  new_country_region_path(@region.country), class:"CTA" %>
+    <% end %>
+  </div>
+
+  <div class="pundit_nav">
+    <% if policy(@region).edit? %>
+      <%= "#{@region.title.capitalize}" %>
+      <%= link_to edit_region_path(@region), class:"CTA" do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    <% end %>
+
+    <% if policy(@region).destroy? %>
+      <%= link_to region_path(@region), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{@region.title}?"} do %>
+        <i class="fas fa-trash"></i>
+      <% end %>
+    <% end %>
+    <% if  policy(Region).create? %>
+      <%= link_to "Ajouter une région",  new_country_region_path(@region.country), class:"CTA" %>
+    <% end %>
+  </div>
+
+
+
+  <div class="nav_margin">
+    <% if policy(Photo).create? %>
+      <%= link_to "Ajouter une photo", new_region_photo_path(@region), class:"CTA" %> |
+    <% end %>
+
+
+    <%= link_to root_path, class:"CTA" do %>
+      <i class="fas fa-home"></i>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <%# else %>
+      <%# link_to root_path, class:"CTA" do  %>
+          <%#= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", 'aria-haspopup': true, 'aria-expanded': false %>
+      <%# end %>
+    <% end %>
+
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <% if user_signed_in? %>
+        <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
       <% end %>
     </div>
-
-
-
-    <div class="nav_margin">
-      <% if policy(Photo).create? %>
-        <%= link_to "Add photo", new_region_photo_path(@region), class:"CTA" %> |
-      <% end %>
-
-      <% if user_signed_in? %>
-        <%= link_to "Back", country_path(@region.country), class:"CTA" %> |
-      <% else %>
-        <%= link_to "Back", :back, class:"CTA" %> |
-      <% end %>
-
-      <%= link_to "Home", root_path, class:"CTA" %>
-
-      <% if user_signed_in? %>
-        <%= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-      <%# else %>
-        <%# link_to root_path, class:"CTA" do  %>
-            <%#= image_tag "faguoren_logo.jpg", class: "avatar dropdown-toggle", 'aria-haspopup': true, 'aria-expanded': false %>
-        <%# end %>
-      <% end %>
-
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        <% end %>
-      </div>
-    </div>
+  </div>
 
 </div>

@@ -29,3 +29,10 @@
   line-height: 3;
   margin-left: 0em;
 }
+
+
+@media all and (max-width: 415px) {
+  .photos_titles {
+    font-size: 12px;
+  }
+}

@@ -23,16 +23,20 @@
           <%= cl_image_tag photo.image.key, alt: "", :secure => true, :height=>550,  :dpr=>2.0,
           :crop=>"scale", :quality=>100, :background=>"#F3F3F3" %>
 
-        <div class="photos_titles">
-        <%= photo.title.capitalize %> <%= photo.description %>
-        </div>
+          <div class="photos_titles">
+          <%= photo.title.capitalize %> <%= photo.description %>
+          </div>
 
-        <% if policy(photo).edit? %>
-          <%= link_to "Edit #{@photo}", edit_photo_path(photo), class:"CTA" %> |
-        <% end %>
-        <% if policy(photo).destroy? %>
-          <%= link_to "Delete #{@photo}", photo_path(photo), class:"CTA", method: :delete, data: { confirm: "Are you sure you want to delete #{photo.title}?"}%>
-        <% end %>
+          <% if policy(photo).edit? %>
+            <%= link_to edit_photo_path(photo), class:"CTA" do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
+          <% end %>
+          <% if policy(photo).destroy? %>
+            <%= link_to photo_path(photo), class:"CTA", method: :delete, data: { confirm: "Es-tu sûr de vouloir supprimer #{photo.title} ?"} do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          <% end %>
         </div>
 
       </div>
