@@ -100,18 +100,24 @@
 @media all and (max-width: 428px) {
    .banner {
     background-image: url('max_width_428.jpeg');
+    background-position: top;
+    background-size: initial;
   }
 }
 
 @media all and (max-width: 390px) {
   .banner {
     background-image: url('max_width_390.jpeg');
+    background-position: top;
+    background-size: initial;
   }
 }
 
 @media all and (max-width: 375px) {
    .banner {
     background-image: url('max_width_375.jpeg');
+    background-position: top;
+    background-size: initial;
   }
 }
 
