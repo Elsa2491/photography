@@ -64,13 +64,14 @@
 
 
 
-@media all and (max-width: 767px) and (orientation : portrait)  {
+@media all and (max-width: 767px) and (orientation : portrait)  { // iphone SE okay
   .banner {
     background-image: url('cover_iphone.jpeg');
+    background-attachment: fixed;
     max-width: 767px;
     max-height: 926px;
-    background-position: top;
-     // background-size: initial;
+    background-position: center;
+    background-size: initial;
   }
   .banner_title {
     margin-left: 5px;
@@ -96,18 +97,11 @@
     margin-top: 100px;
   }
 }
-
-// @media all and (max-width: 480px) {
-//   .banner {
-//     background-image: asset-url('cover_iphone.jpeg');
-//   }
-
-// }
-
-// @media only screen
-//     and (device-width: 390px)
-//     and (device-height: 844px)
-//     //and (-webkit-device-pixel-ratio: 3)
-//     {
-//        background-image: url('cover_iphone.JPG');
-//     }
+@media all and (max-width: 320px) and (orientation : portrait)  { // iphone SE okay
+  .banner {
+    background-image: url('cover_iphone.jpeg');
+    background-attachment: fixed;
+    background-position: top;
+    background-size: initial;
+  }
+}
