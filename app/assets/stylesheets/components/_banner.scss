@@ -118,5 +118,7 @@
 @media all and (max-width: 320px) and (orientation : portrait)  { // iphone SE okay
   .banner {
     background-image: url('max_width_320.jpeg');
+    background-position: top;
+    background-size: initial;
   }
 }
