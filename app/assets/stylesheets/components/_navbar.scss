@@ -7,10 +7,17 @@
 
 .greeting, .pundit_nav {
   margin-left: 1vw;
+  // background-color: blue;
+  margin-top: 5px;
 }
 
 .pundit_nav a {
-  margin-left: 8px
+  margin-left: 8px;
+  // background-color: green;
+}
+
+#pundit_nav_region_show a {
+  padding-bottom: 0px;
 }
 
 .greeting {
@@ -19,12 +26,10 @@
 
 
 .nav_margin {
+  // background-color: yellow;
   margin-top: 0.3vw;
   margin-right: 1vw;
   margin-left: 1vw;
-  a {
-    font-size: 20px;
-  }
 }
 
 
@@ -54,9 +59,13 @@
 
 .nav_countries_show {
   background-color: #F3F3F3;
+  // background-color: red;
   justify-content: space-between;
 }
 
+#nav_chevron, #nav_trash {
+  padding-right: 15px;
+}
 
 @media (max-width: 767px) {
   .navbar {
