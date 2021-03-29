@@ -1,8 +1,8 @@
 <div class="navbar sticky nav_countries_show" >
 
-    <div class="pundit_nav">
+    <div class="pundit_nav" id="country_title">
       <% if policy(@country).edit? %>
-        <%= "#{@country.title.capitalize}" %>
+        <%= "#{@country.title.capitalize} :" %>
         <%= link_to edit_country_path(@country), class:"CTA" do %>
           <i class="fas fa-edit"></i>
         <% end %>
@@ -17,12 +17,12 @@
 
     <div class="nav_margin">
       <% if policy(Region).create? %>
-        <%= link_to "Ajouter une région", new_country_region_path(@country), class:"CTA" %> |
+        <%= link_to "Ajouter une région", new_country_region_path(@country), class:"CTA" %>
       <% end %>
 
 
       <%= link_to root_path, class:"CTA" do %>
-        <i class="fas fa-home"></i>
+        <i class="fas fa-home" id="nav_home_country"></i>
       <% end %>
 
       <% if user_signed_in? %>

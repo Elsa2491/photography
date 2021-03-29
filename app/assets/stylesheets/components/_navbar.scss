@@ -5,14 +5,14 @@
 }
 
 
-.greeting, .pundit_nav {
+.greeting {
   margin-left: 1vw;
   // background-color: blue;
   margin-top: 5px;
 }
 
-.pundit_nav a {
-  margin-left: 8px;
+.pundit_nav a, #country_title {
+  padding-left: 8px;
   // background-color: green;
 }
 
@@ -60,13 +60,14 @@
   justify-content: space-between;
 }
 
-#nav_chevron, #nav_delete, #nav_home {
+#nav_delete, #nav_chevron {
   padding-right: 15px;
 }
 
-#nav_home {
-  padding-left: 10px;
-  font-size: 20px;
+
+#nav_home_country, #nav_home_region {
+  padding-left: 8px;
+  font-size: 18px;
 }
 
 
