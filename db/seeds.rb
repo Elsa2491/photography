@@ -20,7 +20,6 @@ puts 'Database cleaned'
 
 
 puts "Creating users"
-user_1 = User.create!(nickname: "User 1", email: "user1.test@test.com", password: "14PORTEFOIN", password_confirmation: "14PORTEFOIN", admin: false)
 admin_1 = User.create!(nickname: "Mathieu", email: "useradmin.test@test.com", password: "14PORTEFOIN", password_confirmation: "14PORTEFOIN", admin: true)
 
 
