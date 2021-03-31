@@ -3,7 +3,7 @@ class RegionsController < ApplicationController
   before_action :set_region, only: %i[edit update destroy]
 
   def index
-    @regions = policy_scope(Region).order(created_at: :asc)
+    @regions = policy_scope(Region).order(created_at: :desc)
   end
 
   def show

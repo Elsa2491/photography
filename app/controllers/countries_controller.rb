@@ -3,7 +3,7 @@ class CountriesController < ApplicationController
   before_action :set_country, only: %i[edit update destroy]
 
   def index
-    @countries = policy_scope(Country).order(created_at: :asc)
+    @countries = policy_scope(Country).order(created_at: :desc)
   end
 
   def show
