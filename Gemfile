@@ -34,7 +34,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'pundit'
 gem 'cloudinary', '~> 1.12.0'
-# gem 'mail_form'
+gem 'mail_form', '~> 1.9'
 
 group :development, :test do
   gem 'pry-byebug'
