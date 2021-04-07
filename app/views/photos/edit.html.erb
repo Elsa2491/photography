@@ -4,13 +4,13 @@
 
         <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
           <div class="form_title">
-            <%= "Modifier #{@photo.title.capitalize} #{@photo.description.capitalize}" %>
+            <%= "Modifier #{@photo.title.capitalize}" %>
           </div>
           <%= simple_form_for(@photo) do |f| %>
             <%= f.input :title %>
             <%= f.input :description %>
             <%= f.input :image, as: :file %>
-            <%= f.submit 'Modifier une photo' %>
+            <%= f.submit "Modifier #{@photo.title.capitalize}" %>
           <% end %>
 
           <div class="form_links">
