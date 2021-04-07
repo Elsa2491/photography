@@ -1,25 +1,25 @@
 <div class="banner form_new_country">
   <div class="container" id="add_country_container">
       <div class="row pt-5">
-
         <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
           <div class="form_title">
-            <%= 'Ajouter un pays'.upcase %>
+            <%= 'Envoyer un message'.upcase %>
           </div>
-          <%= simple_form_for @country do |f| %>
-            <%= f.input :title %>
-            <%= f.input :description %>
-            <%= f.input :image, as: :file %>
-            <%= f.submit 'Ajouter un pays' %>
+          <%= simple_form_for @contact do |f| %>
+            <%= f.input :name %>
+            <%= f.input :email, required: true %>
+            <%= f.input :message, as: :text %>
+            <div class="hidden">
+              <%= f.input :nickname, hint: 'leave this field blank' %>
+            </div>
+            <%= f.submit 'Contacter Mathieu' %>
           <% end %>
-
           <div class="form_links">
           <%= link_to root_path, class:"CTA" do %>
             <i class="fas fa-home form_icons"></i>
           <% end %>
           </div>
        </div>
-
     </div>
   </div>
 </div>
