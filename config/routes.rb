@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :regions, only: [:edit, :update, :destroy]
   resources :photos, only: [:edit, :update, :destroy]
-
+  resources :contacts, only: [:new, :create]
 
   devise_for :users
   root to: 'countries#index'
