@@ -2,6 +2,14 @@
   padding-top: 8rem !important;
 }
 
+#pt-5 {
+  padding-top: 12rem !important;
+}
+
+#log_in h2 {
+  color: #fff !important;
+}
+
 #add_country_container, #edit_country_container {
   padding-top: 45px;
 }
@@ -26,7 +34,10 @@
     }
 }
 
-.form_title, .text.required label, .file.required label, .file.required input, .form_icons, .form-actions input, .forgot_password a, .string.required label, .email.required label, .text.optional label {
+#log_in, .form_title, .text.required label, .file.required label,
+.file.required input, .form_icons, .form-actions input, .forgot_password a,
+.string.required label, .email.required label, .text.optional label,
+.email.optional label, .password.optional label, .form-check-label {
    color: #fff !important;
  }
 // l'image de fond est dans banner.scss
