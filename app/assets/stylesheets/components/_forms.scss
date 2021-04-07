@@ -1,12 +1,16 @@
+.pt-5 {
+  padding-top: 8rem !important;
+}
+
 #add_country_container, #edit_country_container {
   padding-top: 45px;
 }
 
 
 .form_title {
-  color: #0E0000;
   padding-bottom: 10px;
   letter-spacing: 2px;
+  font-weight: 600;
 }
 
 
@@ -22,5 +26,79 @@
     }
 }
 
-
+.form_title, .text.required label, .file.required label, .file.required input, .form_icons, .form-actions input, .forgot_password a, .string.required label, .email.required label, .text.optional label {
+   color: #fff !important;
+ }
 // l'image de fond est dans banner.scss
+
+
+@media all and (max-width: 767px) and (orientation : portrait)  { // iphone 12 pro okay ?
+  .banner {
+    background-image: url('cover_iphone.jpeg');
+    max-width: 767px;
+    max-height: 926px;
+    background-position: center;
+    background-size: cover;
+  }
+  .banner_title {
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 29px;
+    letter-spacing: 10px;
+  }
+
+  .banner_text, .banner_name {
+    letter-spacing: 0px;
+  }
+
+  .banner_text {
+    font-size: 13px;
+    font-weight: 200;
+  }
+
+  .banner_name {
+    font-size: 17px;
+  }
+
+  .chevron {
+    margin-top: 100px;
+  }
+ }
+
+@media all and (max-width: 428px) {
+   .banner {
+    background-image: url('max_width_428.jpeg');
+    background-position: top;
+    background-size: initial;
+  }
+  .pt-5 {
+    padding-top: 2rem !important;
+  }
+}
+
+@media all and (max-width: 390px) {
+  .banner {
+    background-image: url('max_width_390.jpeg');
+    background-position: top;
+    background-size: initial;
+  }
+}
+
+@media all and (max-width: 375px) {
+   .banner {
+    background-image: url('max_width_375.jpeg');
+    background-position: top;
+    background-size: initial;
+  }
+}
+
+@media all and (max-width: 320px) and (orientation : portrait)  { // iphone SE okay
+  .banner {
+    background-image: url('max_width_320.jpeg');
+    background-position: top;
+    background-size: initial;
+  }
+  .pt-5 {
+    padding-top: 0rem !important;
+  }
+}
