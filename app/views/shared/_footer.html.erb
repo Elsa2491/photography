@@ -1,6 +1,7 @@
 <div class="footer">
   <div class="footer-links nav_margin">
 
+
     <%= link_to "https://www.instagram.com/mathieutbly/", target: :_blank do %>
       <i class="fab fa-instagram"></i>
     <% end %>
@@ -9,11 +10,16 @@
       <i class="fab fa-facebook"></i>
     <% end %>
 
+
     <%= link_to "https://www.linkedin.com/in/mathieu-tremblay-80ba041b5/", target: :_blank do %>
        <i class="fab fa-linkedin"></i>
     <% end %>
 
-    <%= link_to "ecrire un msg", new_contact_path %>
+    <% if !user_signed_in? %>
+        <%= link_to new_contact_path do %>
+          <i class="fas fa-envelope"></i>
+        <% end %>
+    <% end %>
 
   </div>
 </div>
