@@ -1,8 +1,8 @@
 <div class="navbar sticky nav_countries_show" >
 
-    <div class="pundit_nav" id="country_title">
+    <div class="pundit_nav">
       <%= link_to root_path, class:"CTA" do %>
-        <i class="fas fa-chevron-left" id='chevron_nav_countries_show'></i>
+        <i class="fas fa-chevron-left" id='nav_chevron_countries_show'></i>
       <% end %>
       <% if policy(@country).edit? %>
         <%= "#{@country.title.capitalize} :" %>
