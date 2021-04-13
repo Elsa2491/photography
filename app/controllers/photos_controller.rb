@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   before_action :set_photo, only: %i[edit update destroy]
 
   def index
-    @photos = policy_scope(Photo).order(created_at: :desc)
+    @photos = policy_scope(Photo)
   end
 
   def show

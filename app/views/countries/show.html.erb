@@ -8,7 +8,8 @@
 
 <div class="all_cards cards_country_show">
   <div class="wrapper">
-    <% @country.regions.each do |region| %>
+
+    <% @country.regions.order(created_at: :desc).each do |region| %>
 
       <div class="one_card_info">
         <div class="card_image">

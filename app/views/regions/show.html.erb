@@ -7,7 +7,7 @@
 
 <div class="all_cards">
   <div class="wrapper" id="photos_wrapper">
-    <% @region.photos.each_with_index do |photo, index| %>
+    <% @region.photos.order(created_at: :desc).each_with_index do |photo, index| %>
 
       <div class="card_image" id="photos_card_image">
         <div class="one_card_info">
