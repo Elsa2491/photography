@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Welcome to the faguoren site! You will discover Mathieu's photos all over the world. 
+https://faguoren.herokuapp.com/ 📷
