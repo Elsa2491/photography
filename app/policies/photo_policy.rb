@@ -1,26 +1,16 @@
 class PhotoPolicy < ApplicationPolicy
   def create?
-    if user
-      true if user.admin?
-    else
-      false
-    end
+    user&.admin?
+    # user && user.admin?
+    # user.admin? if !user.nil?
   end
 
   def update?
-    if user
-      true if user.admin?
-    else
-      false
-    end
+    create?
   end
 
   def destroy?
-    if user
-      true if user.admin?
-    else
-      false
-    end
+    create?
   end
 
   class Scope < Scope
